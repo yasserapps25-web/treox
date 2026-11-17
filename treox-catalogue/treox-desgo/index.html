@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TREOX DesGO — Fiche technique</title>
+<meta name="description" content="TREOX DesGO — Désinfectant pour les mains — bactéricide, virucide, fongicide et sporicide. Sans rinçage.">
+<meta name="theme-color" content="#7a0f3e">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../img/icon-192.png">
+<link rel="apple-touch-icon" href="../img/icon-192.png">
+<style>
+:root{
+  --ink:#0d2a30; --ink2:#3d5a60; --muted:#6c8489;
+  --bg:#f2f7f7; --card:#ffffff; --line:#dfeaea;
+  --brand:#7a0f3e; --brand2:#a8185a; --accent:#e0337f; --accent-ink:#c21f66; --accent-soft:#fde2ee;
+  --red:#d6334a; --warn:#c2410c; --warn-soft:#fff1e8;
+  --r:18px; --shadow:0 6px 24px rgba(122,15,62,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#e8f4f3; --ink2:#bcd2d1; --muted:#8aa5a6;
+    --bg:#081a1e; --card:#0f2a30; --line:#1d3d44; --accent-soft:#0f3a37; --accent-ink:#4fd6c3; --warn-soft:#33200f;
+    --shadow:0 6px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#e8f4f3; --ink2:#bcd2d1; --muted:#8aa5a6;
+  --bg:#081a1e; --card:#0f2a30; --line:#1d3d44; --accent-soft:#0f3a37; --accent-ink:#4fd6c3; --warn-soft:#33200f;
+  --shadow:0 6px 24px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans Arabic",Tahoma,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.55;font-size:16px;
+  padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+[dir="rtl"] body{font-size:17px}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.ltr{direction:ltr;unicode-bidi:isolate}
+
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:8px;
+  padding:calc(10px + env(safe-area-inset-top)) 16px 10px;background:rgba(122,15,62,.93);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#fff}
+.brandmark{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.06em;font-size:15px}
+.back{display:grid;place-items:center;width:34px;height:34px;margin-inline-end:-2px;border-radius:10px;background:rgba(255,255,255,.12);color:#fff}
+.back svg{width:20px;height:20px}
+[dir="rtl"] .back svg{transform:scaleX(-1)}
+.brandmark i{width:30px;height:30px;border-radius:50%;background:var(--accent);display:grid;place-items:center}
+.brandmark i svg{width:16px;height:16px}
+.lang{display:flex;background:rgba(255,255,255,.12);border-radius:999px;padding:3px}
+.lang button{border:0;background:none;color:#fff;font:inherit;font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;cursor:pointer}
+.lang button.on{background:#fff;color:var(--brand)}
+
+.hero{position:relative;color:#fff;overflow:hidden;padding:26px 16px 0;
+  background:radial-gradient(120% 60% at 70% 78%,rgba(224,51,127,.55),transparent 60%),linear-gradient(170deg,#7a0f3e 0%,#600c31 55%,#4a0926 100%)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.07;
+  background-image:radial-gradient(circle at 1px 1px,#fff 1px,transparent 0);background-size:18px 18px}
+.hero > *{position:relative}
+.kicker{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#ffc9e0;
+  border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:4px 10px}
+[dir="rtl"] .kicker{letter-spacing:0}
+.hero h1{font-size:40px;line-height:1.02;margin:14px 0 6px;font-weight:900;letter-spacing:.01em}
+.hero h1 small{display:block;font-size:.5em;font-weight:800;color:#ffc9e0;letter-spacing:.24em}
+.hero h1 sup{font-size:.4em;vertical-align:1.1em;opacity:.8}
+.hero .sub{font-size:15px;font-weight:600;color:#f1f3f6;max-width:32ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.chip{font-size:12.5px;font-weight:700;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:6px 10px;border-radius:999px}
+.prodimg{display:flex;justify-content:center;margin-top:8px}
+.prodimg img{height:300px!important;width:auto;filter:drop-shadow(0 18px 24px rgba(0,0,0,.35))}
+.badge{position:absolute;inset-inline-end:16px;bottom:72px;background:#fff;color:var(--red);border-radius:16px;padding:10px 12px;text-align:center;box-shadow:0 10px 26px rgba(0,0,0,.25);line-height:1.1}
+.badge b{display:block;font-size:22px;font-weight:900;direction:ltr}
+.badge span{font-size:11px;font-weight:700;color:#3d5a60}
+
+main{max-width:720px;margin:0 auto;padding:0 16px}
+.intro{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:18px;margin-top:-30px;position:relative;z-index:2;
+  border-inline-start:4px solid var(--accent);font-size:15.5px;color:var(--ink2)}
+.intro b{color:var(--ink)}
+.intro p+p{margin-top:10px}
+
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:16px 0}
+.stat{background:var(--card);border-radius:14px;padding:12px 8px;text-align:center;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:19px;color:var(--accent-ink);font-weight:900;line-height:1.2;direction:ltr}
+.stat.hi b{color:var(--red)}
+.stat span{font-size:12px;color:var(--muted);font-weight:600;line-height:1.3;display:block;margin-top:2px}
+
+section{scroll-margin-top:70px;margin:26px 0}
+h2{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:10px}
+[dir="rtl"] h2{letter-spacing:0;font-size:16px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:16px}
+
+.adv{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.adv div{background:var(--card);border-radius:14px;padding:12px;box-shadow:var(--shadow);display:flex;gap:10px;align-items:flex-start;font-size:13.5px;font-weight:700;line-height:1.35}
+.adv svg{flex:none;width:20px;height:20px;color:var(--accent);margin-top:1px}
+
+.list{list-style:none}
+.list li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}
+.list li:last-child{border-bottom:0}
+.ico{flex:none;width:38px;height:38px;border-radius:10px;background:var(--accent-soft);color:var(--accent-ink);display:grid;place-items:center}
+.ico svg{width:20px;height:20px}
+.list b{display:block;font-size:15px}
+.list small{display:block;color:var(--muted);font-size:13.5px;line-height:1.45;margin-top:2px}
+.note{font-size:13px;color:var(--muted);margin-top:10px;font-style:italic}
+
+.norms{display:grid;gap:8px}
+.norm{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--card);border-radius:14px;padding:12px 14px;box-shadow:var(--shadow)}
+.norm b{font-size:15px}
+.norm span{font-size:13px;font-weight:800;color:var(--brand2);background:var(--accent-soft);padding:5px 9px;border-radius:8px;white-space:nowrap;direction:ltr}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .norm span{color:var(--accent-ink)}}
+:root[data-theme="dark"] .norm span{color:var(--accent-ink)}
+.path{margin-top:12px}
+.path h3{font-size:14px;margin-bottom:8px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:12.5px;font-weight:600;border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:5px 8px;direction:ltr}
+.tags span.more{display:none}
+.tags.open span.more{display:inline-block}
+.linkbtn{margin-top:10px;border:0;background:none;color:var(--accent-ink);font:inherit;font-weight:800;font-size:14px;cursor:pointer;padding:4px 0}
+.logos{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.logos div{background:#fff;border-radius:12px;height:68px;display:grid;place-items:center;padding:8px;border:1px solid var(--line)}
+.logos img{max-height:50px;width:auto;object-fit:contain}
+
+.steps{list-style:none;counter-reset:s;display:grid;gap:10px}
+.steps li{counter-increment:s;display:flex;gap:14px;background:var(--card);border-radius:14px;padding:14px;box-shadow:var(--shadow);align-items:flex-start}
+.steps li::before{content:counter(s);flex:none;width:32px;height:32px;border-radius:50%;background:var(--brand);color:#fff;font-weight:800;display:grid;place-items:center}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .steps li::before{background:var(--accent)}}
+:root[data-theme="dark"] .steps li::before{background:var(--accent)}
+.steps b{display:block;font-size:15px}
+.steps small{display:block;color:var(--muted);font-size:13.5px}
+.modeimg{border-radius:14px;overflow:hidden;margin-bottom:10px;box-shadow:var(--shadow);background:#fff}
+
+.timer{margin-top:12px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border-radius:var(--r);padding:18px;box-shadow:var(--shadow);text-align:center}
+.timer h3{font-size:17px}
+.timer p.h{font-size:13px;color:#eceff4;margin:2px 0 12px}
+.ring{position:relative;width:190px;height:190px;margin:0 auto}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:12}
+.ring .bg{stroke:rgba(255,255,255,.15)}
+.ring .fg{stroke:#ff8fbf;stroke-linecap:round;transition:stroke-dashoffset .3s linear}
+.ring .t{position:absolute;inset:0;display:grid;place-items:center;align-content:center}
+.ring .t b{font-size:44px;font-weight:900;font-variant-numeric:tabular-nums;direction:ltr}
+.ring .t span{font-size:12px;color:#eceff4;font-weight:700}
+.tbtns{display:flex;gap:8px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.tbtns button{border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font:inherit;font-weight:800;font-size:14px;padding:10px 16px;border-radius:12px;cursor:pointer}
+.tbtns button.main{background:#fff;color:var(--brand);border-color:#fff}
+.timer.done .fg{stroke:#ffd166}
+.timer .doneMsg{display:none;margin-top:10px;font-weight:800;color:#ffd166}
+.timer.done .doneMsg{display:block}
+
+.spec{width:100%;border-collapse:collapse}
+.spec td{padding:12px 4px;border-bottom:1px solid var(--line);font-size:15px}
+.spec tr:last-child td{border-bottom:0}
+.spec td:first-child{color:var(--muted);font-weight:600;width:42%}
+.spec td:last-child{font-weight:700}
+.grid2{display:grid;gap:12px}
+@media(min-width:560px){.grid2{grid-template-columns:1fr 1fr}}
+.mini h4{font-size:14px;margin-bottom:6px}
+.mini p,.mini li{font-size:14px;color:var(--ink2)}
+.mini ul{list-style:none;display:grid;gap:4px}
+.mini li::before{content:"• ";color:var(--accent)}
+.life{display:flex;gap:10px}
+.life div{flex:1;text-align:center;border:2px solid var(--line);border-radius:14px;padding:10px 4px}
+.life b{font-size:24px;font-weight:900;color:var(--brand)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .life b{color:var(--accent-ink)}}
+:root[data-theme="dark"] .life b{color:var(--accent-ink)}
+.life small{display:block;color:var(--muted);font-size:12px;font-weight:600;line-height:1.3}
+
+.safety{background:var(--warn-soft);border-radius:var(--r);padding:16px}
+.safety ul{list-style:none;display:grid;gap:8px}
+.safety li{display:flex;gap:10px;font-size:14.5px}
+.safety li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--warn);margin-top:8px}
+.sos{display:grid;gap:8px;margin-top:12px}
+.sos a{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--card);border-radius:12px;padding:12px 14px;text-decoration:none;font-size:14px;font-weight:600}
+.sos a b{color:var(--warn);direction:ltr;white-space:nowrap}
+
+.contact{background:var(--brand);color:#fff;border-radius:var(--r);padding:18px}
+.contact img{height:34px;width:auto;margin-bottom:10px}
+.contact p{font-size:13.5px;color:#eceff4}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:800;font-size:14px;padding:13px 10px;border-radius:12px;background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.18)}
+.btn.primary{background:var(--accent);border-color:var(--accent)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn .ltr{white-space:nowrap}
+.maker{margin-top:14px;font-size:13px;color:var(--muted)}
+.maker b{color:var(--ink)}
+footer{text-align:center;font-size:12px;color:var(--muted);padding:24px 16px 8px}
+
+nav.tabs{position:fixed;inset-inline:0;bottom:0;z-index:30;display:grid;grid-template-columns:repeat(5,1fr);
+  background:var(--card);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom));box-shadow:0 -4px 20px rgba(0,0,0,.06)}
+nav.tabs a{display:flex;flex-direction:column;align-items:center;gap:2px;text-decoration:none;font-size:10.5px;font-weight:700;color:var(--muted);padding:4px 0}
+nav.tabs a svg{width:22px;height:22px}
+nav.tabs a.on{color:var(--accent-ink)}
+
+.install{position:fixed;inset-inline:12px;bottom:calc(74px + env(safe-area-inset-bottom));z-index:40;background:var(--ink);color:var(--bg);
+  border-radius:16px;padding:12px 14px;display:none;align-items:center;gap:12px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.install.show{display:flex}
+.install img{width:40px;height:40px;border-radius:10px}
+.install div{flex:1;font-size:13px;line-height:1.35}
+.install b{display:block;font-size:14px}
+.install button{border:0;font:inherit;font-weight:800;font-size:13px;border-radius:10px;padding:9px 12px;cursor:pointer}
+.install .go{background:var(--accent);color:#fff}
+.install .x{background:transparent;color:inherit;opacity:.7;padding:9px 6px}
+
+.contact img{height:46px!important;width:auto}
+.dist img{height:34px!important;width:auto}
+.contact p{line-height:1.55}
+
+.hero h1 small{font-size:.42em;letter-spacing:.08em;line-height:1.2;margin-top:4px}
+.hero .arname{font-size:21px;font-weight:800;opacity:.92;margin-top:6px;font-family:"Noto Sans Arabic",Tahoma,sans-serif}
+.photo{margin:20px auto 34px;max-width:300px;border-radius:22px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.photo img{width:100%;height:auto}
+.banner{margin:14px 0 0;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.stats{grid-template-columns:repeat(2,1fr)!important}
+.stat b{font-size:18px!important}
+.chk{list-style:none;display:grid;gap:2px}
+.chk li{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px;line-height:1.4}
+.chk li:last-child{border-bottom:0}
+.chk li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:7px}
+.micro{margin-top:10px;font-size:14px;color:var(--ink2)}
+.micro b{display:block;color:var(--ink);margin-bottom:4px}
+table.eff,table.dose{width:100%;border-collapse:collapse;font-size:13.5px}
+table.eff th,table.dose th{text-align:start;font-size:11.5px;color:var(--muted);font-weight:700;padding:6px 4px;border-bottom:2px solid var(--line)}
+table.eff td,table.dose td{padding:8px 4px;border-bottom:1px solid var(--line);vertical-align:top}
+table.eff td:not(:first-child),table.eff th:not(:first-child),table.dose td.n,table.dose th.n{text-align:center;white-space:nowrap;direction:ltr}
+table.eff tr.grp td{background:var(--accent-soft);color:var(--accent-ink);font-weight:800;font-size:12.5px}
+table.eff td:first-child{font-style:italic}
+table.eff tr.grp td:first-child{font-style:normal}
+table.dose td small{display:block;color:var(--muted);font-size:12px}
+table.dose td.n{font-weight:800;color:var(--accent-ink)}
+.eff.collapsed tr.more{display:none}
+.morebtn{margin-top:8px;border:0;background:none;color:var(--accent-ink);font:inherit;font-weight:800;font-size:14px;cursor:pointer;padding:4px 0}
+.modeimgs img{border-radius:12px;margin-bottom:8px;background:#fff}
+h3.sub{font-size:15px;margin:16px 0 8px}
+.notes{list-style:none;display:grid;gap:8px;margin-top:10px}
+.notes li{background:var(--card);border-radius:12px;padding:10px 12px;font-size:13.5px;color:var(--ink2);box-shadow:var(--shadow);border-inline-start:3px solid var(--accent)}
+.calc{margin-top:12px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border-radius:var(--r);padding:18px;box-shadow:var(--shadow)}
+.calc h3{font-size:17px}.calc p.h{font-size:13px;opacity:.85;margin:2px 0 10px}
+.opts{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.opts button{border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.1);color:#fff;font:inherit;font-size:12.5px;font-weight:700;padding:7px 10px;border-radius:999px;cursor:pointer}
+.opts button.on{background:#fff;color:var(--brand)}
+.field{display:flex;align-items:center;background:#fff;border-radius:12px;overflow:hidden}
+.field input{flex:1;min-width:0;border:0;font:inherit;font-size:22px;font-weight:800;padding:12px 14px;color:var(--brand);background:transparent;outline:none;direction:ltr;text-align:start}
+.field span{padding:0 14px;color:#777;font-weight:700;white-space:nowrap}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.res div{background:rgba(255,255,255,.12);border-radius:12px;padding:12px}
+.res small{display:block;font-size:12px;opacity:.85;font-weight:600}
+.res b{font-size:20px;font-weight:900;direction:ltr;display:inline-block}
+.res .full{grid-column:1/-1;font-size:12.5px;opacity:.9}
+.packs{display:flex;gap:8px;flex-wrap:wrap}
+.packs b{border:2px solid var(--line);border-radius:12px;padding:8px 12px;font-size:18px;font-weight:900;color:var(--accent-ink);direction:ltr}
+.packs + p{font-size:13px;color:var(--muted);margin-top:8px}
+.contact img{height:46px!important;width:auto}
+.logos{grid-template-columns:repeat(4,1fr)}
+.contact p{line-height:1.55}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="brandmark"><a class="back" href="../" aria-label="Catalogue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></a><i><svg viewBox="0 0 24 24" fill="#fff"><rect x="9" y="3" width="6" height="18" rx="1.5"/><rect x="3" y="9" width="18" height="6" rx="1.5"/></svg></i><span>TREOX</span></div>
+  <div class="lang" role="group" aria-label="Langue"><button data-l="fr" class="on">FR</button><button data-l="ar">عربي</button></div>
+</header>
+<div class="hero" id="top">
+  <span class="kicker" data-t="kicker"></span>
+  <h1 dir="ltr">TREOX<sup>®</sup><small>DesGO</small></h1>
+  <div class="arname">ديسغو تريوكس</div>
+  <p class="sub" data-t="sub"></p>
+  <div class="chips"><span class="chip" data-t="c1"></span><span class="chip" data-t="c2"></span><span class="chip" data-t="c3"></span></div>
+  <div class="photo" style="background:#e8e8ea"><img src="img/produit.jpg" alt="TREOX DesGO"></div>
+</div>
+<main>
+  <div class="intro" data-t="intro"></div>
+  
+  <div class="stats"><div class="stat hi"><b id="sv0"></b><span id="sl0"></span></div><div class="stat"><b id="sv1"></b><span id="sl1"></span></div><div class="stat"><b id="sv2"></b><span id="sl2"></span></div><div class="stat"><b id="sv3"></b><span id="sl3"></span></div></div>
+  <section><h2 data-t="h_adv"></h2><div class="adv" id="adv"></div></section>
+  <section><h2 data-t="h_app"></h2><div class="card"><ul class="chk" id="apps"></ul></div></section>
+  <section id="efficacite"><h2 data-t="h_eff"></h2><div class="norms" id="norms"></div>
+    <div class="card micro" id="microBox"><b data-t="h_micro"></b><span data-t="micro"></span></div>
+    <div class="card" id="effBox" style="margin-top:12px"><h3 class="sub" data-t="h_tab" style="margin-top:0"></h3>
+      <table class="eff collapsed" id="eff"><thead><tr><th data-t="col_agent"></th><th data-t="col_t"></th><th data-t="col_log"></th></tr></thead><tbody></tbody></table>
+      <button class="morebtn" id="moreBtn"></button></div>
+    <div class="logos"><div><img src="../treox-sensitive/img/dermatest.png" alt="dermatest"></div></div>
+  </section>
+  <section id="mode"><h2 data-t="h_mode"></h2>
+    <div class="modeimgs"></div>
+    <div class="card" id="doseBox" style="margin-bottom:10px"><h3 class="sub" data-t="h_dose" style="margin-top:0"></h3><table class="dose" id="dose"></table></div>
+    <ol class="steps" id="steps"></ol>
+    <h3 class="sub" id="s2t" data-t="steps2_t"></h3><ol class="steps" id="steps2"></ol>
+    <ul class="notes" id="notes"></ul>
+    <div class="timer" id="timer"><h3 data-t="tm_t"></h3><p class="h" data-t="tm_h"></p>
+      <div class="ring"><svg viewBox="0 0 200 200"><circle class="bg" cx="100" cy="100" r="88"/><circle class="fg" id="arc" cx="100" cy="100" r="88"/></svg>
+      <div class="t"><b id="clock"></b><span id="tlabel"></span></div></div>
+      <div class="tbtns"><button data-s="30">30 s</button><button data-s="45">45 s</button><button data-s="60">1 min</button><button class="main" id="startBtn"></button></div><div class="doneMsg" data-t="tm_done"></div></div>
+  </section>
+  <section id="fiche"><div class="grid2">
+    <div class="card mini" id="compBox"><h4 data-t="h_comp"></h4><ul id="comp"></ul></div>
+    <div class="card mini"><h4 data-t="h_chars"></h4><table class="spec"><tbody id="chars"></tbody></table></div>
+    <div class="card mini"><h4 data-t="h_cons"></h4><p data-t="cons"></p></div>
+    <div class="card mini" id="lifeBox"><h4 data-t="h_life"></h4><div class="life"><div><b id="lf1"></b><small id="lf1s"></small></div><div><b id="lf2"></b><small id="lf2s"></small></div></div></div>
+    <div class="card mini" id="packBox"><h4 data-t="h_pack"></h4><div class="packs"><b>20 L</b></div><p data-t="packs_txt"></p></div>
+  </div></section>
+  <section id="securite"><h2 data-t="h_safe"></h2><div class="safety"><ul id="safe"></ul><div class="sos">
+    <a href="tel:+21323367777"><span data-t="sos1"></span><b>023 36 77 77</b></a>
+    <a href="tel:+21331886688"><span data-t="sos2"></span><b>031 88 66 88</b></a></div></div></section>
+  <section id="contact"><h2 data-t="h_contact"></h2><div class="contact">
+    <img src="../img/treox-logo-blanc.svg" alt="TREOX Algérie" width="430" height="125">
+    <p data-t="dist"></p>
+    <div class="btns">
+      <a class="btn primary" href="tel:+213671954616"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span class="ltr">0671 95 46 16</span></a>
+      <a class="btn" href="https://wa.me/213671954616?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20TREOX%20DesGO."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp</a>
+      <a class="btn" style="grid-column:1/-1" href="mailto:treox.info@treoxalgerie.com?subject=Demande%20de%20devis%20TREOX%20DesGO"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><span data-t="quote"></span></a>
+    </div></div></section>
+  <footer>© TREOX ALGÉRIE · <a href="https://www.treoxalgerie.com">treoxalgerie.com</a></footer>
+</main>
+<nav class="tabs" id="tabs">
+  <a href="#top" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span data-t="n1"></span></a>
+  <a href="#efficacite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span data-t="n2"></span></a>
+  <a href="#mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.7s-6 6.6-6 11.3a6 6 0 0 0 12 0c0-4.7-6-11.3-6-11.3z"/></svg><span data-t="n3"></span></a>
+  <a href="#fiche"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg><span data-t="n4"></span></a>
+  <a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span data-t="n5"></span></a>
+</nav>
+<script>
+const T={"fr": {"h_adv": "Avantages", "h_app": "Applications", "h_eff": "Efficacité & normes", "h_tab": "Efficacité mesurée", "h_mode": "Mode d'emploi", "h_dose": "Dosages recommandés", "h_comp": "Composition", "h_chars": "Caractéristiques", "h_cons": "Conservation", "h_life": "Durée de vie", "h_pack": "Conditionnement", "h_safe": "Précautions d'emploi", "h_contact": "Commander / Contact", "h_micro": "Micro-organismes ciblés", "sos1": "Centre national antipoison (Alger)", "sos2": "Centre antipoison (Constantine)", "col_agent": "Agent pathogène", "col_t": "Contact (min)", "col_log": "Réduction (log)", "more": "Voir tout le tableau", "less": "Réduire", "calc_t": "Calculateur de dosage", "calc_h": "Choisissez l'usage puis saisissez la quantité.", "u_water": "litres d'eau", "u_sol": "litres de solution", "u_m2": "m²", "u_m3": "m³", "r_prod": "Produit à ajouter", "r_water": "Eau à ajouter", "r_dose": "Dosage", "r_solap": "Solution à appliquer", "to": "à", "per": "pour", "n_ratio": "1 L de produit pour {a} L d'eau", "n_per1000": "{a} L de produit pour 1000 L d'eau", "n_pct": "Solution à {a} %", "n_area": "{a} mL de solution par m²", "n_air": "{a} mL de solution par m³", "tm_t": "Minuteur", "tm_h": "Lancez-le au début du temps de contact.", "tm_done": "✓ Temps écoulé.", "start": "Démarrer", "pause": "Pause", "resume": "Reprendre", "reset": "Recommencer", "remaining": "restant", "n1": "Accueil", "n2": "Efficacité", "n3": "Emploi", "n4": "Fiche", "n5": "Contact", "quote": "Devis par e-mail", "dist": "SARL TREOX ALGÉRIE — Production des produits désinfectants et détergents.<br>Cité El Yasmine, Aïn El Bey, DNC N° 118, Constantine, Algérie.<br><span dir=\"ltr\">treox.info@treoxalgerie.com · www.treoxalgerie.com</span>", "kicker": "Hygiène des mains", "sub": "Désinfectant pour les mains — bactéricide, virucide, fongicide et sporicide. Sans rinçage.", "c1": "EN 1500", "c2": "Dermatest « Excellent »", "c3": "pH neutre 7 – 7,8", "intro": "<p><b>DesGO®</b> est une solution désinfectante et nettoyante qui <b>limite efficacement les contaminations manuportées</b>, sans danger.</p><p>Sa composition unique et écologique, élaborée avec une haute technologie, détruit <b>99,999 %</b> des bactéries, virus, champignons, moisissures et spores.</p>", "cons": "À conserver fermé dans l'emballage d'origine, dans un endroit sec, à l'abri de la lumière et du soleil direct.", "packs_txt": "Autres conditionnements sur commande.", "micro": "", "steps2_t": "", "L": {"stats": [["99,999 %", "des germes détruits"], ["30″–1′", "de friction"], ["2–3 mL", "par application"], ["pH 7", "Neutre"]], "adv": ["<b>Efficace</b> — large spectre d'action, effet rapide", "Désinfection hygiénique des mains selon EN 1500", "<b>Sûr</b> — testé Dermatest « Excellent »", "Non irritant, non toxique, non inflammable", "Sans pictogramme de danger", "Sans précaution particulière de manipulation ou de stockage", "<b>Durable</b> — biodégradable", "Sans substances bio-accumulatives ou persistantes"], "apps": ["Établissements de santé", "Industrie agro-alimentaire", "Vétérinaire & élevage"], "steps": [["Bien humidifier les mains", "Environ 2 à 3 mL de DesGO."], ["Frotter les mains", "Pendant 30 secondes à 1 minute."], ["Laisser sécher", "Sans rincer."]], "steps2": [], "notes": [], "comp": ["Eau traitée", "Chlorure de sodium (NaCl)", "Acide hypochloreux (HOCl)"], "safe": ["Tenir hors de la portée des enfants.", "Respecter les indications de l'étiquette.", "<b>Ne pas mélanger</b> avec d'autres produits.", "En cas d'ingestion ou de contact avec les yeux, consulter un médecin."], "chars": [["Couleur", "Incolore"], ["Odeur", "Légèrement chlorée"], ["État", "Liquide"], ["pH", "<span class=\"ltr\">7 – 7,8</span>"], ["Densité (20 °C)", "<span class=\"ltr\">≈ 1000 g/L</span>"]], "norms": [["Mains", "EN 1500"], ["Bactéricide", "EN 1276"], ["Fongicide", "EN 1275"], ["Virucide", "EN 14675"], ["Sporicide", "EN 17126"]], "dose": null, "dose3": null, "life": null}}, "ar": {"h_adv": "المزايا", "h_app": "مجالات الاستخدام", "h_eff": "الفعالية والمعايير", "h_tab": "الفعالية المقاسة", "h_mode": "طريقة الاستعمال", "h_dose": "الجرعات الموصى بها", "h_comp": "التركيبة", "h_chars": "الخصائص", "h_cons": "شروط الحفظ", "h_life": "مدة الصلاحية", "h_pack": "التعبئة", "h_safe": "احتياطات الاستعمال", "h_contact": "الطلب / الاتصال", "h_micro": "الكائنات الدقيقة المستهدفة", "sos1": "المركز الوطني لمكافحة التسمم (الجزائر)", "sos2": "مركز مكافحة التسمم (قسنطينة)", "col_agent": "العامل الممرض", "col_t": "التلامس (د)", "col_log": "الانخفاض (log)", "more": "عرض الجدول كاملًا", "less": "إخفاء", "calc_t": "حاسبة الجرعة", "calc_h": "اختر الاستعمال ثم أدخل الكمية.", "u_water": "لتر ماء", "u_sol": "لتر محلول", "u_m2": "م²", "u_m3": "م³", "r_prod": "كمية المنتج", "r_water": "كمية الماء", "r_dose": "الجرعة", "r_solap": "المحلول المطلوب", "to": "إلى", "per": "لكل", "n_ratio": "1 لتر من المنتج لكل {a} لتر ماء", "n_per1000": "{a} لتر من المنتج لكل 1000 لتر ماء", "n_pct": "محلول بتركيز {a}٪", "n_area": "{a} مل من المحلول لكل م²", "n_air": "{a} مل من المحلول لكل م³", "tm_t": "المؤقت", "tm_h": "شغّله عند بداية مدة التلامس.", "tm_done": "✓ انتهى الوقت.", "start": "ابدأ", "pause": "إيقاف مؤقت", "resume": "استئناف", "reset": "إعادة", "remaining": "متبقٍ", "n1": "الرئيسية", "n2": "الفعالية", "n3": "الاستعمال", "n4": "البطاقة", "n5": "اتصل", "quote": "طلب عرض سعر", "dist": "شركة تريوكس الجيري — إنتاج المواد المطهرة والمنظفة.<br>حي الياسمين، الشطر الثاني دي – أن – سي، طريق عين الباي رقم 118، قسنطينة، الجزائر.<br><span dir=\"ltr\">treox.info@treoxalgerie.com · www.treoxalgerie.com</span>", "kicker": "نظافة الأيدي", "sub": "مطهّر لليدين — مبيد للبكتيريا والفيروسات والفطريات والأبواغ. بدون شطف.", "c1": "EN 1500", "c2": "Dermatest «ممتاز»", "c3": "pH متعادل 7 – 7.8", "intro": "<p><b>ديسغو ®</b> محلول مطهّر ومنظّف <b>يحدّ بفعالية من التلوث المنقول باليدين</b> دون مخاطر.</p><p>يمتلك تركيبة فريدة صديقة للبيئة، مطورة بتكنولوجيا عالية، ويقضي على <b>99.999٪</b> من البكتيريا والفيروسات والفطريات والعفن والأبواغ.</p>", "cons": "يُحفظ مغلقًا في عبوته الأصلية، في مكان جاف، بعيدًا عن الضوء وأشعة الشمس المباشرة.", "packs_txt": "أحجام أخرى متوفرة عند الطلب.", "micro": "", "steps2_t": "", "L": {"stats": [["99.999٪", "من الجراثيم"], ["30″–1′", "من الفرك"], ["2–3 مل", "لكل استعمال"], ["pH 7", "متعادل"]], "adv": ["<b>فعّال</b> — طيف واسع، تأثير سريع", "تطهير صحي لليدين وفق المعيار EN 1500", "<b>آمن</b> — مختبر جلديًا DERMATEST «ممتاز»", "غير مهيّج، غير سام وغير قابل للاشتعال", "بدون رموز الخطر", "بدون احتياطات خاصة للمناولة أو التخزين", "<b>مستدام</b> — قابل للتحلل الحيوي", "بدون مواد متراكمة حيويًا أو ثابتة"], "apps": ["المؤسسات الصحية", "الصناعات الغذائية", "البيطرة وتربية الحيوانات"], "steps": [["بلّل اليدين جيدًا", "حوالي 2 إلى 3 مل من ديسغو."], ["افرك اليدين", "من 30 إلى 60 ثانية."], ["اتركه يجف", "دون شطف."]], "steps2": [], "notes": [], "comp": ["ماء معالج", "كلوريد الصوديوم (NaCl)", "حمض الهيبوكلوروز (HOCl)"], "safe": ["يُحفظ بعيدًا عن متناول الأطفال.", "احترم التعليمات المدونة على الملصق.", "<b>لا يُخلط</b> مع منتجات أخرى.", "في حالة البلع أو ملامسة العينين، استشر طبيبًا."], "chars": [["اللون", "عديم اللون"], ["الرائحة", "كلورية خفيفة"], ["الحالة", "سائل"], ["pH", "<span class=\"ltr\">7 – 7.8</span>"], ["الكثافة (20 °C)", "<span class=\"ltr\">≈ 1000 g/L</span>"]], "norms": [["تطهير الأيدي", "EN 1500"], ["مبيد للبكتيريا", "EN 1276"], ["مبيد للفطريات", "EN 1275"], ["مبيد للفيروسات", "EN 14675"], ["مبيد للأبواغ", "EN 17126"]], "dose": null, "dose3": null, "life": null}}}, EFF=[], CALC=null, TIMER=true, TDEF=30;
+const CHECK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" stroke-width="2"/><path d="m8 12 3 3 5-6"/></svg>';
+let L='fr', effOpen=false, ci=0;
+try{ L=localStorage.getItem('lang')||((navigator.language||'').startsWith('ar')?'ar':'fr'); }catch(e){}
+const $=id=>document.getElementById(id);
+const show=(id,on)=>{ $(id).style.display=on?'':'none'; };
+function render(){
+  const t=T[L], d=t.L;
+  document.documentElement.lang=L; document.documentElement.dir=L==='ar'?'rtl':'ltr';
+  document.querySelectorAll('[data-t]').forEach(el=>{const v=t[el.dataset.t]; if(typeof v==='string') el.innerHTML=v;});
+  d.stats.forEach(([v,l],i)=>{$('sv'+i).textContent=v;$('sl'+i).textContent=l;});
+  $('adv').innerHTML=d.adv.map(a=>`<div>${CHECK}<span>${a}</span></div>`).join('');
+  $('apps').innerHTML=d.apps.map(a=>`<li><span>${a}</span></li>`).join('');
+  $('norms').innerHTML=d.norms.map(([n,v])=>`<div class="norm"><b>${n}</b><span>${v}</span></div>`).join('');
+  show('microBox', !!t.micro);
+  show('effBox', EFF.length>0);
+  if(EFF.length){ let k=0;
+    $('eff').querySelector('tbody').innerHTML=EFF.map(r=>{ if(r.g!==undefined) return `<tr class="grp ${k>=9?'more':''}"><td colspan="3">${L==='ar'?r.ga:r.g}</td></tr>`;
+      k++; return `<tr class="${k>9?'more':''}"><td>${r.a}</td><td>${r.t}</td><td>${r.l}</td></tr>`;}).join('');
+    $('eff').classList.toggle('collapsed',!effOpen); show('moreBtn', EFF.filter(r=>r.a).length>9); $('moreBtn').textContent=effOpen?t.less:t.more; }
+  if(d.dose){ $('dose').innerHTML=`<thead><tr><th>${L==='ar'?'الاستعمال':'Application'}</th><th class="n">${d.dose[0]}</th></tr></thead><tbody>`+d.dose[1].map(([a,b])=>`<tr><td>${a}</td><td class="n">${b}</td></tr>`).join('')+'</tbody>'; }
+  else if(d.dose3){ const h=d.dose3[0]; $('dose').innerHTML=`<thead><tr><th>${h[0]}</th><th class="n">${h[1]}</th><th class="n">${h[2]}</th></tr></thead><tbody>`+d.dose3[1].map(([a,b,c])=>`<tr><td>${a}</td><td class="n">${b}</td><td class="n">${c}</td></tr>`).join('')+'</tbody>'; }
+  show('doseBox', !!(d.dose||d.dose3));
+  const st=s=>s.map(([b,x])=>`<li><div><b>${b}</b>${x?`<small>${x}</small>`:''}</div></li>`).join('');
+  $('steps').innerHTML=st(d.steps); show('steps', d.steps.length>0);
+  $('steps2').innerHTML=st(d.steps2); show('steps2', d.steps2.length>0); show('s2t', d.steps2.length>0);
+  $('notes').innerHTML=d.notes.map(n=>`<li>${n}</li>`).join(''); show('notes', d.notes.length>0);
+  $('comp').innerHTML=d.comp.map(c=>`<li>${c}</li>`).join(''); show('compBox', d.comp.length>0);
+  $('chars').innerHTML=d.chars.map(([k,v])=>`<tr><td>${k}</td><td>${v}</td></tr>`).join('');
+  show('lifeBox', !!d.life); if(d.life){ $('lf1').textContent=d.life[0]; $('lf1s').textContent=d.life[1]; $('lf2').textContent=d.life[2]; $('lf2s').textContent=d.life[3]; }
+  show('packBox', !!(document.querySelector('.packs b')||t.packs_txt));
+  $('safe').innerHTML=d.safe.map(s=>`<li><span>${s}</span></li>`).join('');
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===L));
+  document.querySelector('.hero h1').style.textAlign=L==='ar'?'right':'left';
+  if(CALC) drawCalc(); if(TIMER) drawTimer();
+}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>{L=b.dataset.l;try{localStorage.setItem('lang',L)}catch(e){}render();});
+$('moreBtn').onclick=()=>{effOpen=!effOpen;render();};
+
+/* ---- calculateur ---- */
+const DEF={ratio:10,per1000:1000,pct:100,area:20,air:50};
+const UNIT={ratio:'u_water',per1000:'u_water',pct:'u_sol',area:'u_m2',air:'u_m3'};
+const fnum=v=>{ if(!isFinite(v)) return '—'; return (Math.round(v*100)/100).toLocaleString(L==='ar'?'fr-FR':'fr-FR'); };
+const vol=l=>l<1?fnum(Math.round(l*1000))+' ml':fnum(l)+' L';
+const rng=(a,b,f)=>Math.abs(a-b)<1e-9?f(a):f(a)+' – '+f(b);
+function drawCalc(){
+  const t=T[L], c=CALC[ci];
+  $('opts').innerHTML=CALC.map((x,i)=>`<button data-i="${i}" class="${i===ci?'on':''}">${x[L]}</button>`).join('');
+  document.querySelectorAll('#opts button').forEach(b=>b.onclick=()=>{ci=+b.dataset.i; $('cin').value=DEF[CALC[ci].k]; drawCalc();});
+  $('cunit').textContent=t[UNIT[c.k]];
+  const v=parseFloat(String($('cin').value).replace(',','.'))||0, a=c.a, b=c.b;
+  let r1l=t.r_prod, r1='', r2l=t.r_dose, r2='', note='';
+  if(c.k==='ratio'){ r1=rng(v/b, v/a, vol); r2=rng(b===a?a:a, b, n=>fnum(n)); note=t.n_ratio.replace('{a}', a===b?fnum(a):fnum(a)+' '+t.to+' '+fnum(b)); r2l=L==='ar'?'لتر ماء لكل 1 لتر منتج':'L d\'eau pour 1 L de produit'; }
+  if(c.k==='per1000'){ r1=rng(v*a/1000, v*b/1000, vol); r2=rng(a,b,n=>fnum(n)+' L'); r2l=L==='ar'?'لكل 1000 لتر ماء':'pour 1000 L d\'eau'; note=t.n_per1000.replace('{a}', a===b?fnum(a):fnum(a)+' '+t.to+' '+fnum(b)); }
+  if(c.k==='pct'){ r1=rng(v*a/100, v*b/100, vol); r2l=t.r_water; r2=rng(v-v*a/100, v-v*b/100, vol); note=t.n_pct.replace('{a}', a===b?fnum(a):fnum(a)+' – '+fnum(b)); }
+  if(c.k==='area'||c.k==='air'){ r1l=t.r_solap; r1=rng(v*a/1000, v*b/1000, vol); r2=rng(a,b,n=>fnum(n)+(c.k==='area'?' mL/m²':' mL/m³')); note=(c.k==='area'?t.n_area:t.n_air).replace('{a}', fnum(a)+' – '+fnum(b)); }
+  $('r1l').textContent=r1l; $('r1').textContent=r1; $('r2l').textContent=r2l; $('r2').textContent=r2; $('rnote').textContent=note;
+}
+if(CALC){ $('cin').value=DEF[CALC[0].k]; $('cin').addEventListener('input',drawCalc); }
+
+/* ---- minuteur ---- */
+let total=TDEF||60,left=total,endAt=0,tick=null,state='idle',wake=null,C=0,arc=null;
+if(TIMER){ arc=$('arc'); C=2*Math.PI*88; arc.style.strokeDasharray=C; }
+const fmt=s=>String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');
+function drawTimer(){const t=T[L]; $('clock').textContent=fmt(Math.ceil(left)); arc.style.strokeDashoffset=C*(1-left/total);
+  $('tlabel').textContent=state==='done'?'':t.remaining;
+  $('startBtn').textContent=state==='running'?t.pause:state==='paused'?t.resume:state==='done'?t.reset:t.start;
+  $('timer').classList.toggle('done',state==='done');}
+function beep(){try{const a=new(window.AudioContext||window.webkitAudioContext)();[0,.35,.7].forEach(d=>{const o=a.createOscillator(),g=a.createGain();o.frequency.value=880;o.connect(g);g.connect(a.destination);g.gain.setValueAtTime(.0001,a.currentTime+d);g.gain.exponentialRampToValueAtTime(.3,a.currentTime+d+.02);g.gain.exponentialRampToValueAtTime(.0001,a.currentTime+d+.25);o.start(a.currentTime+d);o.stop(a.currentTime+d+.3);});}catch(e){}
+  try{navigator.vibrate&&navigator.vibrate([300,150,300,150,300]);}catch(e){}}
+async function lockScreen(on){try{if(on&&'wakeLock' in navigator)wake=await navigator.wakeLock.request('screen');else if(!on&&wake){await wake.release();wake=null;}}catch(e){}}
+function run(){clearInterval(tick);tick=setInterval(()=>{left=Math.max(0,(endAt-Date.now())/1000);if(left<=0){clearInterval(tick);state='done';lockScreen(false);beep();}drawTimer();},250);}
+function setDur(s){clearInterval(tick);total=left=s;state='idle';lockScreen(false);drawTimer();}
+if(TIMER){ document.querySelectorAll('.tbtns [data-s]').forEach(b=>b.onclick=()=>setDur(+b.dataset.s));
+  $('startBtn').onclick=()=>{ if(state==='running'){clearInterval(tick);state='paused';lockScreen(false);}
+    else if(state==='done'){setDur(total);return;} else{endAt=Date.now()+left*1000;state='running';lockScreen(true);run();} drawTimer();}; }
+
+const tabs=[...document.querySelectorAll('#tabs a')], targets=tabs.map(a=>document.querySelector(a.getAttribute('href')));
+addEventListener('scroll',()=>{let i=0;targets.forEach((s,k)=>{if(s.getBoundingClientRect().top<innerHeight*.4)i=k;});
+  if(innerHeight+scrollY>=document.body.scrollHeight-4)i=tabs.length-1;tabs.forEach((a,k)=>a.classList.toggle('on',k===i));},{passive:true});
+render();
+if('serviceWorker' in navigator) addEventListener('load',()=>navigator.serviceWorker.register('../sw.js').catch(()=>{}));
+</script>
+</body>
+</html>

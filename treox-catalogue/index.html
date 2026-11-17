@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Catalogue TREOX Algérie</title>
+<meta name="description" content="Catalogue des produits désinfectants et détergents TREOX Algérie : fiches techniques par gamme.">
+<meta name="theme-color" content="#141826">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="img/icon-192.png">
+<link rel="apple-touch-icon" href="img/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="TREOX">
+<style>
+:root{--navy:#141826;--ink:#141826;--ink2:#465065;--muted:#6f788c;--bg:#f4f5f9;--card:#fff;--line:#e3e6ee;--accent:#f07a1a;--r:20px;--w:1180px}
+@media(prefers-color-scheme:dark){:root{--ink:#eef0f6;--ink2:#c3c9d6;--muted:#8d95a8;--bg:#0c0f18;--card:#171b28;--line:#262c3d}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans Arabic",Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:20;background:rgba(20,24,38,.92);backdrop-filter:blur(12px);padding-top:env(safe-area-inset-top)}
+header.top .wrap{display:flex;align-items:center;gap:24px;height:64px}
+header.top .logo{height:38px;width:auto}
+nav.main{display:none;gap:4px;margin-inline-start:auto}
+nav.main a{color:#c9cfdc;text-decoration:none;font-weight:700;font-size:14px;padding:8px 12px;border-radius:10px}
+nav.main a:hover,nav.main a.on{background:rgba(255,255,255,.1);color:#fff}
+.lang{display:flex;background:rgba(255,255,255,.12);border-radius:999px;padding:3px;margin-inline-start:auto}
+nav.main+.lang{margin-inline-start:12px}
+.lang button{border:0;background:none;color:#fff;font:inherit;font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;cursor:pointer}
+.lang button.on{background:#fff;color:var(--navy)}
+@media(min-width:900px){nav.main{display:flex}}
+.hero{background:radial-gradient(70% 90% at 100% 0%,rgba(240,122,26,.38),transparent 60%),linear-gradient(165deg,#1d2236,#141826);color:#fff;padding:56px 0 96px;overflow:hidden}
+.hero .wrap{display:grid;gap:36px;align-items:center}
+.hero h1{font-size:clamp(34px,6vw,64px);line-height:1.04;font-weight:900;letter-spacing:-.01em;max-width:14ch}
+.hero p{color:#c9cfdc;font-size:17px;max-width:46ch;margin-top:16px}
+.search{display:flex;align-items:center;gap:10px;background:#fff;border-radius:14px;padding:0 16px;margin-top:28px;max-width:480px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.search svg{width:20px;height:20px;color:#7a8396;flex:none}
+.search input{flex:1;min-width:0;border:0;background:none;font:inherit;font-size:16px;padding:15px 0;color:#141826;outline:none}
+.shelf{display:none}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.1fr .9fr}.shelf{display:flex;justify-content:center;align-items:flex-end}
+.shelf span{width:200px;aspect-ratio:3/4;border-radius:22px;display:grid;place-items:center;box-shadow:0 24px 50px rgba(0,0,0,.4);margin-inline:-14px}
+.shelf span:nth-child(2){transform:translateY(-26px);z-index:2;width:228px}
+.shelf img{width:84%;height:84%;object-fit:contain}}
+.hero.sm{padding:40px 0 80px}.hero.sm .wrap{grid-template-columns:1fr}.hero.sm h1{max-width:20ch;font-size:clamp(30px,5vw,48px)}
+.hero.sm .gi{width:64px;height:64px;border-radius:50%;background:#fff;padding:3px;margin-bottom:18px}
+main{margin-top:-52px;position:relative;padding-bottom:40px}
+.groups{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(min-width:900px){.groups{grid-template-columns:repeat(4,1fr)}}
+.gc{display:flex;flex-direction:column;gap:10px;text-decoration:none;background:var(--card);border-radius:var(--r);padding:20px;min-height:170px;border-top:5px solid var(--gc);box-shadow:0 14px 34px rgba(20,24,38,.12);transition:transform .2s}
+.gc:hover{transform:translateY(-4px)}
+.gc img{width:52px;height:52px}.gc b{font-size:16px;line-height:1.25}.gc small{margin-top:auto;color:var(--muted);font-weight:700;font-size:13px}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:40px 0 16px}
+.bar h2{font-size:22px;font-weight:900;margin-inline-end:auto}
+.filters{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;max-width:100%}
+.filters button{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink2);font:inherit;font-size:13px;font-weight:700;padding:8px 14px;border-radius:999px;cursor:pointer}
+.filters button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:560px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1100px){.grid{grid-template-columns:repeat(4,1fr)}}
+.prod{display:flex;flex-direction:column;text-decoration:none;background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:0 6px 24px rgba(20,24,38,.08);transition:transform .2s,box-shadow .2s}
+.prod:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(20,24,38,.16)}
+.thumb{aspect-ratio:4/3;background:var(--c);display:grid;place-items:center;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover}.thumb.cut img{object-fit:contain;padding:12px}
+.thumb b{font-size:34px;font-weight:900;color:#161a24;direction:ltr}
+.info{padding:16px 18px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.tags{display:flex;gap:5px}.tags img{width:24px;height:24px}
+.prod h3{font-size:18px;line-height:1.2;font-weight:900;direction:ltr;text-align:start}
+.prod p{font-size:14px;color:var(--muted);line-height:1.45}
+.soon{align-self:flex-start;font-size:12px;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:2px 8px;margin-top:auto}
+.empty{display:none;text-align:center;color:var(--muted);padding:40px 18px;background:var(--card);border-radius:var(--r)}
+.empty b{display:block;color:var(--ink);font-size:17px;margin-bottom:4px}
+.others{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+.others a{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:14px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 16px 8px 8px}
+.others img{width:28px;height:28px}
+.back{display:inline-block;color:#fff;background:rgba(255,255,255,.12);text-decoration:none;font-weight:800;font-size:14px;padding:8px 14px;border-radius:12px;margin-bottom:22px}
+footer{background:var(--navy);color:#9aa3b8;padding:36px 0 calc(36px + env(safe-area-inset-bottom));font-size:14px;line-height:1.7}
+footer img{height:34px;margin-bottom:14px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+
+.hero.big{min-height:calc(100svh - 64px);display:flex;align-items:center;padding:56px 0 110px;position:relative}
+.hero.big::after{content:"TREOX";position:absolute;inset-inline:0;bottom:-.18em;text-align:center;font-weight:900;font-size:clamp(110px,26vw,380px);line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.09);pointer-events:none;direction:ltr}
+.hero.big h1{font-size:clamp(40px,7.4vw,92px);line-height:1;max-width:12ch}
+.hero.big p{font-size:clamp(17px,2vw,21px);max-width:44ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-block;text-decoration:none;font-weight:800;font-size:16px;padding:15px 26px;border-radius:14px;background:var(--accent);color:#141826}
+.btn.ghost{background:none;color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+@media(min-width:900px){.hero.big .shelf span{width:230px}.hero.big .shelf span:nth-child(2){width:270px;transform:translateY(-40px)}}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:-56px;position:relative;z-index:3;background:var(--card);border-radius:var(--r);box-shadow:0 18px 40px rgba(20,24,38,.16);overflow:hidden}
+.facts div{padding:22px 16px;text-align:center;border-inline-end:1px solid var(--line)}.facts div:last-child{border:0}
+.facts b{display:block;font-size:clamp(26px,4vw,42px);font-weight:900;line-height:1}.facts span{font-size:13px;color:var(--muted);font-weight:700}
+.sec{padding:84px 0 0}.sec h2.t{font-size:clamp(28px,4.4vw,48px);line-height:1.08;font-weight:900;max-width:18ch}
+.sec .lead{color:var(--ink2);font-size:18px;max-width:60ch;margin-top:14px}
+.range{margin-top:72px;background:color-mix(in srgb,var(--gc) 16%,var(--bg));padding:60px 0}
+.range .wrap{display:grid;gap:34px;align-items:center}
+@media(min-width:900px){.range .wrap{grid-template-columns:1fr 1fr;gap:70px}.range.rev .vis{order:2}}
+.vis{display:flex;justify-content:center;align-items:center;min-height:260px}
+.vis span{width:42%;aspect-ratio:3/4;border-radius:22px;display:grid;place-items:center;margin-inline:-5%;box-shadow:0 18px 40px rgba(20,24,38,.2);overflow:hidden}
+.vis span:nth-child(2){transform:translateY(-22px);z-index:2}.vis img{width:100%;height:100%;object-fit:cover}.vis .cut img{object-fit:contain;padding:10px}
+.vis .ic{width:120px;height:120px}
+.range h3{font-size:clamp(26px,3.6vw,40px);line-height:1.1;font-weight:900;margin:14px 0 12px}
+.range p{font-size:17px;color:var(--ink2);max-width:46ch}.range .n{font-weight:800;color:var(--muted);font-size:14px}
+.range .go{display:inline-block;margin-top:22px;text-decoration:none;font-weight:800;background:var(--ink);color:var(--bg);padding:13px 22px;border-radius:12px}
+.about{display:grid;gap:34px;align-items:center}
+@media(min-width:900px){.about{grid-template-columns:1fr 1fr;gap:70px}}
+.about img{border-radius:var(--r);width:100%;aspect-ratio:4/3;object-fit:cover}
+.about p{color:var(--ink2);font-size:17px;margin-top:16px;max-width:56ch}
+.contact{margin-top:84px;background:linear-gradient(165deg,#1d2236,#141826);color:#fff;padding:64px 0;text-align:center}
+.contact h2{font-size:clamp(28px,4.4vw,46px);font-weight:900;line-height:1.1}.contact p{color:#c9cfdc;margin:14px auto 0;max-width:46ch}
+.contact .cta{justify-content:center}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a href=""><img class="logo" src="img/treox-logo-blanc.svg" alt="TREOX"></a>
+<nav class="main" id="nav"></nav>
+<div class="lang"><button data-l="fr">FR</button><button data-l="ar">عربي</button></div>
+</div></header>
+<section class="hero big"><div class="wrap">
+<div><h1 id="h1"></h1><p id="sub"></p>
+<div class="cta"><a class="btn" href="#gammes" id="c1"></a><a class="btn ghost" href="#catalogue" id="c2"></a></div></div>
+<div class="shelf" id="shelf"></div>
+</div></section>
+<main><div class="wrap"><div class="facts" id="facts"></div>
+<section class="sec" id="gammes"><h2 class="t" id="t1"></h2><p class="lead" id="l1"></p></section></div>
+<div id="ranges"></div>
+<div class="wrap"><section class="sec" id="catalogue"><h2 class="t" id="t2"></h2>
+<label class="search" style="box-shadow:0 6px 24px rgba(20,24,38,.1);margin-top:22px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" autocomplete="off"></label>
+<div class="bar" style="margin-top:18px"><div class="filters" id="filters"></div></div>
+<div class="grid" id="grid"></div><div class="empty" id="empty"></div></section>
+<section class="sec"><div class="about"><img src="treox-c-plus/img/usine.jpg" alt="" loading="lazy"><div><h2 class="t" id="t3"></h2><p id="a1"></p><p id="a2"></p></div></div></section></div></main>
+<section class="contact"><div class="wrap"><h2 id="t4"></h2><p id="a3"></p><div class="cta"><a class="btn" href="mailto:treox.info@treoxalgerie.com">treox.info@treoxalgerie.com</a><a class="btn ghost" href="https://www.treoxalgerie.com" dir="ltr">www.treoxalgerie.com</a></div></div></section>
+<footer><div class="wrap"><img src="img/treox-logo-blanc.svg" alt="TREOX"><div id="dist"></div></div></footer>
+<script>
+const PFX='', GROUP=null;
+const GROUPS = [{"slug": "veterinaire", "c": "#B4A05C", "bg": "#f5f1e4", "icon": "cow", "fr": "Vétérinaire & élevage", "ar": "البيطرة وتربية الحيوانات", "dfr": "Hygiène des élevages, des équipements, de l'air et des points d'abreuvement.", "dar": "نظافة المزارع والمعدات والهواء ونقاط الشرب."}, {"slug": "industrie", "c": "#F7A61D", "bg": "#fef3e0", "icon": "factory", "fr": "Industrie & agro-alimentaire", "ar": "الصناعة والصناعات الغذائية", "dfr": "Nettoyage et désinfection des sites de production, eaux de process, CIP et abattoirs.", "dar": "تنظيف وتطهير مواقع الإنتاج، مياه المعالجة، الأنظمة المغلقة والمسالخ."}, {"slug": "sante", "c": "#13B5C6", "bg": "#ddf4f7", "icon": "health", "fr": "Santé & milieu hospitalier", "ar": "الصحة والمحيط الاستشفائي", "dfr": "Désinfection des surfaces, de l'atmosphère et hygiène des mains en établissements de santé.", "dar": "تطهير الأسطح والجو ونظافة الأيدي في المؤسسات الصحية."}, {"slug": "domestique", "c": "#87BE42", "bg": "#eef6e3", "icon": "home", "fr": "Gamme domestique", "ar": "المنتجات المنزلية", "dfr": "Produits d'hygiène pour la maison.", "dar": "منتجات النظافة للمنزل."}];
+const PRODUCTS = [
+ {
+  "slug": "treox-c-plus",
+  "name": "TREOX C+",
+  "g": [
+   "veterinaire",
+   "industrie"
+  ],
+  "c": "#2b1e46",
+  "img": "treox-c-plus/img/produit.jpg",
+  "cut": false,
+  "soon": false,
+  "fr": "Nettoyage et dégraissage professionnel des surfaces et équipements.",
+  "ar": "تنظيف وإزالة الدهون المهنية للأسطح والمعدات."
+ },
+ {
+  "slug": "treox-d5-agricole",
+  "name": "TREOX D5 Agricole",
+  "g": [
+   "veterinaire"
+  ],
+  "c": "#9ab5ae",
+  "img": "treox-d5-agricole/img/produit.jpg",
+  "cut": false,
+  "soon": false,
+  "fr": "Désinfection des surfaces, équipements, de l'air et des points d'abreuvement.",
+  "ar": "تطهير الأسطح والمعدات والهواء ونقاط الشرب."
+ },
+ {
+  "slug": "treox-d2-agricole",
+  "name": "TREOX D2 Agricole",
+  "g": [
+   "veterinaire"
+  ],
+  "c": "#9ab5ae",
+  "img": "treox-d2-agricole/img/produit.jpg",
+  "cut": false,
+  "soon": false,
+  "fr": "Désinfection et maîtrise microbiologique de l'eau.",
+  "ar": "تطهير المياه والتحكم في جودتها الميكروبيولوجية."
+ },
+ {
+  "slug": "treox-d5",
+  "name": "TREOX D5",
+  "g": [
+   "industrie"
+  ],
+  "c": "#b9c6c3",
+  "img": "treox-d5/img/produit.jpg",
+  "cut": false,
+  "soon": false,
+  "fr": "Désinfection des surfaces, équipements, de l'air et des points d'abreuvement.",
+  "ar": "تطهير الأسطح والمعدات والهواء ونقاط الشرب."
+ },
+ {
+  "slug": "treox-d2-eaux",
+  "name": "TREOX D2 Eaux",
+  "g": [
+   "industrie"
+  ],
+  "c": "#f0aac3",
+  "img": "treox-d2-eaux/img/produit.jpg",
+  "cut": false,
+  "soon": false,
+  "fr": "Traitement et désinfection de l'eau de process.",
+  "ar": "معالجة وتطهير مياه العمليات الصناعية."
+ },
+ {
+  "slug": "treox-d2-cip",
+  "name": "TREOX D2 CIP",
+  "g": [
+   "industrie"
+  ],
+  "c": "#9ab5ae",
+  "img": "treox-d2-cip/img/produit.jpg",
+  "cut": false,
+  "soon": false,
+  "fr": "Désinfection en circuit fermé et CIP.",
+  "ar": "التطهير في الأنظمة المغلقة والتنظيف المكاني (CIP)."
+ },
+ {
+  "slug": "treox-d5-agroalimentaire",
+  "name": "TREOX D5 Agro-alimentaire",
+  "g": [
+   "industrie"
+  ],
+  "c": "#cfe3b0",
+  "img": "treox-d5-agroalimentaire/img/produit.jpg",
+  "cut": false,
+  "soon": false,
+  "fr": "Désinfection des surfaces, équipements et de l'air, même à forte charge organique.",
+  "ar": "تطهير الأسطح والمعدات والهواء، حتى مع حمولة عضوية عالية."
+ },
+ {
+  "slug": "treox-d5-abattoirs",
+  "name": "TREOX D5 Abattoirs",
+  "g": [
+   "industrie"
+  ],
+  "c": "#f6a68c",
+  "img": null,
+  "cut": false,
+  "soon": true,
+  "fr": "Désinfection des surfaces, matériels et de l'air — environnements à forte charge organique.",
+  "ar": "تطهير الأسطح والمعدات والهواء — بيئات ذات حمولة عضوية عالية."
+ },
+ {
+  "slug": "treox-strong",
+  "name": "TREOX STRONG",
+  "g": [
+   "sante"
+  ],
+  "c": "#a3bedb",
+  "img": "treox-strong/img/produit.jpg",
+  "cut": false,
+  "soon": false,
+  "fr": "Solution concentrée haute performance pour la désinfection professionnelle des surfaces et de l'atmosphère (DSVA).",
+  "ar": "محلول مركّز عالي الأداء للتطهير المهني للأسطح والجو (DSVA)."
+ },
+ {
+  "slug": "treox-sensitive",
+  "name": "TREOX SENSITIVE",
+  "g": [
+   "sante"
+  ],
+  "c": "#0b4a54",
+  "img": "treox-sensitive/img/produit.webp",
+  "cut": true,
+  "soon": false,
+  "fr": "Solution prête à l'emploi pour la désinfection quotidienne des surfaces.",
+  "ar": "محلول جاهز للاستعمال للتطهير اليومي للأسطح."
+ },
+ {
+  "slug": "treox-desgo",
+  "name": "TREOX DesGO",
+  "g": [
+   "veterinaire",
+   "industrie",
+   "sante"
+  ],
+  "c": "#f0aac3",
+  "img": "treox-desgo/img/produit.jpg",
+  "cut": false,
+  "soon": false,
+  "fr": "Hygiène et désinfection des mains.",
+  "ar": "نظافة وتطهير الأيدي."
+ },
+ {
+  "slug": "assyl-clean",
+  "name": "ASSYL Clean WC & Salle de bain",
+  "g": [
+   "domestique"
+  ],
+  "c": "#fbd3e5",
+  "img": "assyl-clean/img/produit.webp",
+  "cut": true,
+  "soon": false,
+  "fr": "Désinfectant multi-surfaces pour WC & salle de bain — élimine 99,999 % des bactéries, champignons et spores.",
+  "ar": "مطهر متعدد الأسطح للمراحيض والحمامات — يقضي على 99.999٪ من البكتيريا والفطريات والأبواغ."
+ },
+ {
+  "slug": "assyl-lave-sol",
+  "name": "ASSYL Clean Lave-sol",
+  "g": [
+   "domestique"
+  ],
+  "c": "#f3d6ef",
+  "img": "assyl-lave-sol/img/produit.webp",
+  "cut": true,
+  "soon": false,
+  "fr": "Nettoie et désodorise tous types de sols — senteur florale longue durée.",
+  "ar": "ينظف ويزيل روائح جميع أنواع الأرضيات — برائحة الزهور تدوم طويلًا."
+ },
+ {
+  "slug": "assyl-cuisine",
+  "name": "ASSYL Clean Cuisine",
+  "g": [
+   "domestique"
+  ],
+  "c": "#cdeee3",
+  "img": "assyl-cuisine/img/produit.webp",
+  "cut": true,
+  "soon": false,
+  "fr": "Nettoyant multi-surfaces pour la cuisine — élimine graisse et taches, senteur fruitée.",
+  "ar": "منظف متعدد الأسطح للمطبخ — يزيل الدهون والبقع، برائحة الفواكه."
+ },
+ {
+  "slug": "assyl-lave-vitres",
+  "name": "ASSYL Clean Lave-vitres",
+  "g": [
+   "domestique"
+  ],
+  "c": "#d5e6f8",
+  "img": "assyl-lave-vitres/img/produit.webp",
+  "cut": true,
+  "soon": false,
+  "fr": "Pour toutes les surfaces vitrées — 100 % brillance, sans traces, senteur florale.",
+  "ar": "لجميع الأسطح الزجاجية — لمعان 100٪ بدون آثار، برائحة الزهور."
+ },
+ {
+  "slug": "assyl-degraissant",
+  "name": "ASSYL Clean Dégraissant",
+  "g": [
+   "domestique"
+  ],
+  "c": "#fbdcc8",
+  "img": "assyl-degraissant/img/produit.webp",
+  "cut": true,
+  "soon": false,
+  "fr": "Dégraissant pour toutes les surfaces et appareils de cuisine.",
+  "ar": "مزيل الدهون لجميع أسطح المطبخ والأجهزة المنزلية."
+ }
+];
+
+const T={fr:{title:'L\'hygiène professionnelle, fabriquée à Constantine.',sub:'TREOX Algérie produit des désinfectants et des détergents pour la santé, l\'industrie, l\'élevage et la maison.',c1:'Voir les gammes',c2:'Chercher un produit',prods:'produits',gam:'gammes',lg:'langues',t1:'Quatre gammes, un même niveau d\'exigence',l1:'Chaque gamme répond à un métier précis. Ouvrez-en une pour accéder aux fiches techniques de ses produits.',go:'Voir la gamme',t2:'Tout le catalogue',ph:'Rechercher un produit…',all:'Toutes les gammes',empty:'<b>Aucun produit trouvé</b>Essayez un autre nom ou une autre gamme.',soon:'Fiche bientôt disponible',t3:'Fabriqué en Algérie, expliqué en toutes lettres',a1:'SARL TREOX ALGÉRIE produit des désinfectants et des détergents depuis Constantine. Ce catalogue réunit les fiches techniques de ses produits, gamme par gamme.',a2:'Chaque fiche est disponible en français et en arabe, et s\'ouvre directement depuis le QR code présent sur l\'emballage.',t4:'Une question sur un produit ?',a3:'Écrivez-nous ou visitez notre site pour toute demande d\'information.',n:k=>k?k+' produit'+(k>1?'s':''):'Bientôt disponible',dist:'SARL TREOX ALGÉRIE — Production des produits désinfectants et détergents.<br>Cité El Yasmine, Aïn El Bey, DNC N° 118, Constantine, Algérie.<br><span dir="ltr">treox.info@treoxalgerie.com · www.treoxalgerie.com</span>'},
+ar:{title:'النظافة المهنية، صُنعت في قسنطينة.',sub:'تنتج تريوكس الجزائر المطهرات والمنظفات لقطاعات الصحة والصناعة وتربية الحيوانات والمنزل.',c1:'اكتشف المجموعات',c2:'ابحث عن منتج',prods:'منتجات',gam:'مجموعات',lg:'لغتان',t1:'أربع مجموعات بنفس مستوى الجودة',l1:'كل مجموعة تلبي مهنة محددة. افتح مجموعة للاطلاع على البطاقات التقنية لمنتجاتها.',go:'عرض المجموعة',t2:'كل الكتالوج',ph:'ابحث عن منتج…',all:'جميع المجموعات',empty:'<b>لم يتم العثور على أي منتج</b>جرّب اسمًا أو مجموعة أخرى.',soon:'البطاقة متوفرة قريبًا',t3:'صُنع في الجزائر وشرح مفصّل',a1:'تنتج شركة تريوكس الجزائر المطهرات والمنظفات انطلاقًا من قسنطينة. يجمع هذا الكتالوج البطاقات التقنية لمنتجاتها، مجموعة بعد مجموعة.',a2:'كل بطاقة متوفرة بالفرنسية والعربية، وتُفتح مباشرة من رمز QR الموجود على العبوة.',t4:'سؤال حول منتج؟',a3:'راسلونا أو زوروا موقعنا لأي طلب معلومات.',n:k=>k?k+' '+(k>2&&k<11?'منتجات':'منتج'):'قريبًا',dist:'شركة تريوكس الجيري — إنتاج المواد المطهرة والمنظفة.<br>حي الياسمين، الشطر الثاني دي – أن – سي، طريق عين الباي رقم 118، قسنطينة، الجزائر.<br><span dir="ltr">treox.info@treoxalgerie.com · www.treoxalgerie.com</span>'}};
+let L='fr',F='all';
+try{L=localStorage.getItem('lang')||((navigator.language||'').startsWith('ar')?'ar':'fr')}catch(e){}
+const $=id=>document.getElementById(id),G=s=>GROUPS.find(g=>g.slug===s),count=s=>PRODUCTS.filter(p=>p.g.includes(s)).length;
+const set=(id,v)=>{$(id).innerHTML=v};
+function draw(){
+ const t=T[L],q=$('q').value.trim().toLowerCase();
+ const list=PRODUCTS.filter(p=>(F==='all'||p.g.includes(F))&&(!q||(p.name+' '+p.fr+' '+p.ar).toLowerCase().includes(q)));
+ $('grid').innerHTML=list.map(p=>{const w=p.name.replace(/^TREOX\s*/,'').split(' ')[0];
+  const th=p.img?`<img src="${p.img}" alt="${p.name}" loading="lazy">`:`<b>${w}</b>`;
+  const tags=`<span class="tags">${p.g.map(s=>`<img src="img/gamme-${s}.svg" alt="${G(s)[L]}" title="${G(s)[L]}">`).join('')}</span>`;
+  return `<a class="prod" href="${p.slug}/" style="--c:${p.c}"><span class="thumb ${p.cut?'cut':''}">${th}</span><span class="info">${tags}<h3>${p.name}</h3><p>${p[L]}</p>${p.soon?`<em class="soon">${t.soon}</em>`:''}</span></a>`}).join('');
+ $('empty').style.display=list.length?'none':'block';set('empty',t.empty);
+}
+function render(){
+ const t=T[L];document.documentElement.lang=L;document.documentElement.dir=L==='ar'?'rtl':'ltr';
+ ['title:h1','sub:sub','c1:c1','c2:c2','t1:t1','l1:l1','t2:t2','t3:t3','a1:a1','a2:a2','t4:t4','a3:a3','dist:dist'].forEach(x=>{const[k,i]=x.split(':');set(i,t[k])});
+ $('q').placeholder=t.ph;
+ $('nav').innerHTML=GROUPS.map(g=>`<a href="${g.slug}/">${g[L]}</a>`).join('');
+ const live=PRODUCTS.filter(p=>!p.soon).length;
+ set('facts',`<div><b>${live}</b><span>${t.prods}</span></div><div><b>${GROUPS.length}</b><span>${t.gam}</span></div><div><b>2</b><span>${t.lg}</span></div>`);
+ $('shelf').innerHTML=PRODUCTS.filter(p=>p.img&&p.cut&&!p.soon).slice(0,3).map(p=>`<span style="background:${p.c}"><img src="${p.img}" alt=""></span>`).join('');
+ $('ranges').innerHTML=GROUPS.map((g,i)=>{
+  const ps=PRODUCTS.filter(p=>p.g.includes(g.slug)&&p.img).slice(0,3);
+  const vis=ps.length?ps.map(p=>`<span class="${p.cut?'cut':''}" style="background:${p.c}"><img src="${p.img}" alt="" loading="lazy"></span>`).join(''):`<img class="ic" src="img/gamme-${g.slug}.svg" alt="">`;
+  return `<section class="range ${i%2?'rev':''}" style="--gc:${g.c}"><div class="wrap"><div class="vis">${vis}</div><div><span class="n">${t.n(count(g.slug))}</span><h3>${g[L]}</h3><p>${g['d'+L]}</p><a class="go" href="${g.slug}/">${t.go}</a></div></div></section>`}).join('');
+ $('filters').innerHTML=['all',...GROUPS.filter(g=>count(g.slug)).map(g=>g.slug)].map(s=>`<button data-c="${s}" class="${s===F?'on':''}">${s==='all'?t.all:G(s)[L]}</button>`).join('');
+ document.querySelectorAll('#filters button').forEach(b=>b.onclick=()=>{F=b.dataset.c;render()});
+ document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===L));draw();
+}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>{L=b.dataset.l;try{localStorage.setItem('lang',L)}catch(e){}render()});
+$('q').addEventListener('input',draw);render();
+if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+</script>
+</body>
+</html>

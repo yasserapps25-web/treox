@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ASSYL Clean — Dégraissant pour cuisine</title>
+<meta name="description" content="ASSYL Clean — Dégraissant pour cuisine — Dégraissant pour toutes les surfaces et appareils de cuisine. Gamme domestique TREOX Algérie.">
+<meta name="theme-color" content="#8a3207">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../img/icon-192.png">
+<link rel="apple-touch-icon" href="../img/icon-192.png">
+<style>
+:root{
+  --ink:#0d2a30; --ink2:#3d5a60; --muted:#6c8489;
+  --bg:#f2f7f7; --card:#ffffff; --line:#dfeaea;
+  --brand:#8a3207; --brand2:#c24a0e; --accent:#ec6b1c; --accent-ink:#c8560f; --accent-soft:#fde8da;
+  --red:#d6334a; --warn:#c2410c; --warn-soft:#fff1e8;
+  --r:18px; --shadow:0 6px 24px rgba(138,50,7,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#e8f4f3; --ink2:#bcd2d1; --muted:#8aa5a6;
+    --bg:#081a1e; --card:#0f2a30; --line:#1d3d44; --accent-soft:#0f3a37; --accent-ink:#4fd6c3; --warn-soft:#33200f;
+    --shadow:0 6px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#e8f4f3; --ink2:#bcd2d1; --muted:#8aa5a6;
+  --bg:#081a1e; --card:#0f2a30; --line:#1d3d44; --accent-soft:#0f3a37; --accent-ink:#4fd6c3; --warn-soft:#33200f;
+  --shadow:0 6px 24px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans Arabic",Tahoma,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.55;font-size:16px;
+  padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+[dir="rtl"] body{font-size:17px}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.ltr{direction:ltr;unicode-bidi:isolate}
+
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:8px;
+  padding:calc(10px + env(safe-area-inset-top)) 16px 10px;background:rgba(138,50,7,.93);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#fff}
+.brandmark{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.06em;font-size:15px}
+.back{display:grid;place-items:center;width:34px;height:34px;margin-inline-end:-2px;border-radius:10px;background:rgba(255,255,255,.12);color:#fff}
+.back svg{width:20px;height:20px}
+[dir="rtl"] .back svg{transform:scaleX(-1)}
+.brandmark i{width:30px;height:30px;border-radius:50%;background:var(--accent);display:grid;place-items:center}
+.brandmark i svg{width:16px;height:16px}
+.lang{display:flex;background:rgba(255,255,255,.12);border-radius:999px;padding:3px}
+.lang button{border:0;background:none;color:#fff;font:inherit;font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;cursor:pointer}
+.lang button.on{background:#fff;color:var(--brand)}
+
+.hero{position:relative;color:#fff;overflow:hidden;padding:26px 16px 0;
+  background:radial-gradient(120% 60% at 70% 78%,rgba(236,107,28,.55),transparent 60%),linear-gradient(170deg,#8a3207 0%,#6e2805 55%,#561f04 100%)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.07;
+  background-image:radial-gradient(circle at 1px 1px,#fff 1px,transparent 0);background-size:18px 18px}
+.hero > *{position:relative}
+.kicker{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#ffd8bd;
+  border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:4px 10px}
+[dir="rtl"] .kicker{letter-spacing:0}
+.hero h1{font-size:40px;line-height:1.02;margin:14px 0 6px;font-weight:900;letter-spacing:.01em}
+.hero h1 small{display:block;font-size:.5em;font-weight:800;color:#ffd8bd;letter-spacing:.24em}
+.hero h1 sup{font-size:.4em;vertical-align:1.1em;opacity:.8}
+.hero .sub{font-size:15px;font-weight:600;color:#f3f3f6;max-width:32ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.chip{font-size:12.5px;font-weight:700;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:6px 10px;border-radius:999px}
+.prodimg{display:flex;justify-content:center;margin-top:8px}
+.prodimg img{height:300px!important;width:auto;filter:drop-shadow(0 18px 24px rgba(0,0,0,.35))}
+.badge{position:absolute;inset-inline-end:16px;bottom:72px;background:#fff;color:var(--red);border-radius:16px;padding:10px 12px;text-align:center;box-shadow:0 10px 26px rgba(0,0,0,.25);line-height:1.1}
+.badge b{display:block;font-size:22px;font-weight:900;direction:ltr}
+.badge span{font-size:11px;font-weight:700;color:#3d5a60}
+
+main{max-width:720px;margin:0 auto;padding:0 16px}
+.intro{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:18px;margin-top:-30px;position:relative;z-index:2;
+  border-inline-start:4px solid var(--accent);font-size:15.5px;color:var(--ink2)}
+.intro b{color:var(--ink)}
+.intro p+p{margin-top:10px}
+
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:16px 0}
+.stat{background:var(--card);border-radius:14px;padding:12px 8px;text-align:center;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:19px;color:var(--accent-ink);font-weight:900;line-height:1.2;direction:ltr}
+.stat.hi b{color:var(--red)}
+.stat span{font-size:12px;color:var(--muted);font-weight:600;line-height:1.3;display:block;margin-top:2px}
+
+section{scroll-margin-top:70px;margin:26px 0}
+h2{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:10px}
+[dir="rtl"] h2{letter-spacing:0;font-size:16px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:16px}
+
+.adv{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.adv div{background:var(--card);border-radius:14px;padding:12px;box-shadow:var(--shadow);display:flex;gap:10px;align-items:flex-start;font-size:13.5px;font-weight:700;line-height:1.35}
+.adv svg{flex:none;width:20px;height:20px;color:var(--accent);margin-top:1px}
+
+.list{list-style:none}
+.list li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}
+.list li:last-child{border-bottom:0}
+.ico{flex:none;width:38px;height:38px;border-radius:10px;background:var(--accent-soft);color:var(--accent-ink);display:grid;place-items:center}
+.ico svg{width:20px;height:20px}
+.list b{display:block;font-size:15px}
+.list small{display:block;color:var(--muted);font-size:13.5px;line-height:1.45;margin-top:2px}
+.note{font-size:13px;color:var(--muted);margin-top:10px;font-style:italic}
+
+.norms{display:grid;gap:8px}
+.norm{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--card);border-radius:14px;padding:12px 14px;box-shadow:var(--shadow)}
+.norm b{font-size:15px}
+.norm span{font-size:13px;font-weight:800;color:var(--brand2);background:var(--accent-soft);padding:5px 9px;border-radius:8px;white-space:nowrap;direction:ltr}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .norm span{color:var(--accent-ink)}}
+:root[data-theme="dark"] .norm span{color:var(--accent-ink)}
+.path{margin-top:12px}
+.path h3{font-size:14px;margin-bottom:8px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:12.5px;font-weight:600;border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:5px 8px;direction:ltr}
+.tags span.more{display:none}
+.tags.open span.more{display:inline-block}
+.linkbtn{margin-top:10px;border:0;background:none;color:var(--accent-ink);font:inherit;font-weight:800;font-size:14px;cursor:pointer;padding:4px 0}
+.logos{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.logos div{background:#fff;border-radius:12px;height:68px;display:grid;place-items:center;padding:8px;border:1px solid var(--line)}
+.logos img{max-height:50px;width:auto;object-fit:contain}
+
+.steps{list-style:none;counter-reset:s;display:grid;gap:10px}
+.steps li{counter-increment:s;display:flex;gap:14px;background:var(--card);border-radius:14px;padding:14px;box-shadow:var(--shadow);align-items:flex-start}
+.steps li::before{content:counter(s);flex:none;width:32px;height:32px;border-radius:50%;background:var(--brand);color:#fff;font-weight:800;display:grid;place-items:center}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .steps li::before{background:var(--accent)}}
+:root[data-theme="dark"] .steps li::before{background:var(--accent)}
+.steps b{display:block;font-size:15px}
+.steps small{display:block;color:var(--muted);font-size:13.5px}
+.modeimg{border-radius:14px;overflow:hidden;margin-bottom:10px;box-shadow:var(--shadow);background:#fff}
+
+.timer{margin-top:12px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border-radius:var(--r);padding:18px;box-shadow:var(--shadow);text-align:center}
+.timer h3{font-size:17px}
+.timer p.h{font-size:13px;color:#eeeef3;margin:2px 0 12px}
+.ring{position:relative;width:190px;height:190px;margin:0 auto}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:12}
+.ring .bg{stroke:rgba(255,255,255,.15)}
+.ring .fg{stroke:#ffab73;stroke-linecap:round;transition:stroke-dashoffset .3s linear}
+.ring .t{position:absolute;inset:0;display:grid;place-items:center;align-content:center}
+.ring .t b{font-size:44px;font-weight:900;font-variant-numeric:tabular-nums;direction:ltr}
+.ring .t span{font-size:12px;color:#eeeef3;font-weight:700}
+.tbtns{display:flex;gap:8px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.tbtns button{border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font:inherit;font-weight:800;font-size:14px;padding:10px 16px;border-radius:12px;cursor:pointer}
+.tbtns button.main{background:#fff;color:var(--brand);border-color:#fff}
+.timer.done .fg{stroke:#ffd166}
+.timer .doneMsg{display:none;margin-top:10px;font-weight:800;color:#ffd166}
+.timer.done .doneMsg{display:block}
+
+.spec{width:100%;border-collapse:collapse}
+.spec td{padding:12px 4px;border-bottom:1px solid var(--line);font-size:15px}
+.spec tr:last-child td{border-bottom:0}
+.spec td:first-child{color:var(--muted);font-weight:600;width:42%}
+.spec td:last-child{font-weight:700}
+.grid2{display:grid;gap:12px}
+@media(min-width:560px){.grid2{grid-template-columns:1fr 1fr}}
+.mini h4{font-size:14px;margin-bottom:6px}
+.mini p,.mini li{font-size:14px;color:var(--ink2)}
+.mini ul{list-style:none;display:grid;gap:4px}
+.mini li::before{content:"• ";color:var(--accent)}
+.life{display:flex;gap:10px}
+.life div{flex:1;text-align:center;border:2px solid var(--line);border-radius:14px;padding:10px 4px}
+.life b{font-size:24px;font-weight:900;color:var(--brand)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .life b{color:var(--accent-ink)}}
+:root[data-theme="dark"] .life b{color:var(--accent-ink)}
+.life small{display:block;color:var(--muted);font-size:12px;font-weight:600;line-height:1.3}
+
+.safety{background:var(--warn-soft);border-radius:var(--r);padding:16px}
+.safety ul{list-style:none;display:grid;gap:8px}
+.safety li{display:flex;gap:10px;font-size:14.5px}
+.safety li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--warn);margin-top:8px}
+.sos{display:grid;gap:8px;margin-top:12px}
+.sos a{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--card);border-radius:12px;padding:12px 14px;text-decoration:none;font-size:14px;font-weight:600}
+.sos a b{color:var(--warn);direction:ltr;white-space:nowrap}
+
+.contact{background:var(--brand);color:#fff;border-radius:var(--r);padding:18px}
+.contact img{height:34px;width:auto;margin-bottom:10px}
+.contact p{font-size:13.5px;color:#eeeef3}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:800;font-size:14px;padding:13px 10px;border-radius:12px;background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.18)}
+.btn.primary{background:var(--accent);border-color:var(--accent)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn .ltr{white-space:nowrap}
+.maker{margin-top:14px;font-size:13px;color:var(--muted)}
+.maker b{color:var(--ink)}
+footer{text-align:center;font-size:12px;color:var(--muted);padding:24px 16px 8px}
+
+nav.tabs{position:fixed;inset-inline:0;bottom:0;z-index:30;display:grid;grid-template-columns:repeat(5,1fr);
+  background:var(--card);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom));box-shadow:0 -4px 20px rgba(0,0,0,.06)}
+nav.tabs a{display:flex;flex-direction:column;align-items:center;gap:2px;text-decoration:none;font-size:10.5px;font-weight:700;color:var(--muted);padding:4px 0}
+nav.tabs a svg{width:22px;height:22px}
+nav.tabs a.on{color:var(--accent-ink)}
+
+.install{position:fixed;inset-inline:12px;bottom:calc(74px + env(safe-area-inset-bottom));z-index:40;background:var(--ink);color:var(--bg);
+  border-radius:16px;padding:12px 14px;display:none;align-items:center;gap:12px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.install.show{display:flex}
+.install img{width:40px;height:40px;border-radius:10px}
+.install div{flex:1;font-size:13px;line-height:1.35}
+.install b{display:block;font-size:14px}
+.install button{border:0;font:inherit;font-weight:800;font-size:13px;border-radius:10px;padding:9px 12px;cursor:pointer}
+.install .go{background:var(--accent);color:#fff}
+.install .x{background:transparent;color:inherit;opacity:.7;padding:9px 6px}
+
+.contact img{height:46px!important;width:auto}
+.dist img{height:34px!important;width:auto}
+.contact p{line-height:1.55}
+
+.prodimg img{height:330px!important;filter:drop-shadow(0 18px 26px rgba(0,0,0,.35))}
+.hero h1 small{letter-spacing:.06em;font-size:.42em;line-height:1.25;display:block;margin-top:4px}
+.hero .arname{font-size:22px;font-weight:800;opacity:.9;margin-top:4px;font-family:"Noto Sans Arabic",Tahoma,sans-serif}
+.claims{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}
+.claims div{background:var(--card);border-radius:14px;padding:12px 6px;text-align:center;box-shadow:var(--shadow);font-size:12.5px;font-weight:700;color:var(--ink2);line-height:1.3}
+.claims svg{width:26px;height:26px;color:var(--accent);display:block;margin:0 auto 6px}
+.where{display:flex;flex-wrap:wrap;gap:8px}
+.where span{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:14px;font-weight:700}
+.pack1{display:flex;align-items:center;gap:14px}
+.pack1 b{font-size:34px;font-weight:900;color:var(--accent-ink);direction:ltr}
+.pack1 span{font-size:14px;color:var(--muted)}
+.calc{margin-top:12px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border-radius:var(--r);padding:18px;box-shadow:var(--shadow)}
+.calc h3{font-size:17px}.calc p.h{font-size:13px;opacity:.85;margin:2px 0 12px}
+.field{display:flex;align-items:center;background:#fff;border-radius:12px;overflow:hidden}
+.field input{flex:1;min-width:0;border:0;font:inherit;font-size:22px;font-weight:800;padding:12px 14px;color:var(--brand);background:transparent;outline:none;direction:ltr;text-align:start}
+.field span{padding:0 14px;color:#777;font-weight:700}
+.presets{display:flex;gap:8px;margin:10px 0 14px;flex-wrap:wrap}
+.presets button{border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font:inherit;font-size:13px;font-weight:700;padding:7px 12px;border-radius:999px;cursor:pointer}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.res div{background:rgba(255,255,255,.12);border-radius:12px;padding:12px}
+.res small{display:block;font-size:12px;opacity:.85;font-weight:600}
+.res b{font-size:24px;font-weight:900;direction:ltr;display:inline-block}
+.res .full{grid-column:1/-1;font-size:13px}
+.contact img{height:46px!important;width:auto}
+.contact p{line-height:1.55}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="brandmark"><a class="back" href="../" aria-label="Catalogue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></a><i><svg viewBox="0 0 24 24" fill="#fff"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></i><span>TREOX</span></div>
+  <div class="lang" role="group" aria-label="Langue"><button data-l="fr" class="on">FR</button><button data-l="ar">عربي</button></div>
+</header>
+<div class="hero" id="top">
+  <span class="kicker" data-t="kicker"></span>
+  <h1 dir="ltr">ASSYL Clean<small>DÉGRAISSANT POUR CUISINE</small></h1>
+  <div class="arname">أسيل كلين — مزيل الدهون للمطبخ</div>
+  <p class="sub" data-t="sub"></p>
+  <div class="chips"><span class="chip" data-t="c1"></span><span class="chip" data-t="c2"></span><span class="chip" data-t="c3"></span></div>
+  <div class="prodimg"><img src="img/produit.webp" alt="ASSYL Clean — Dégraissant pour cuisine"></div>
+</div>
+<main>
+  <div class="intro" data-t="intro"></div>
+  <div class="stats"><div class="stat hi"><b id="sv0"></b><span id="sl0"></span></div><div class="stat"><b id="sv1"></b><span id="sl1"></span></div></div>
+  <div class="claims"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4 0 7-3 7-7 0-5-5-7-5-12-3 2-5 5-5 8-1-1-2-2-2-4-2 2-2 5-2 8 0 4 3 7 7 7z"/></svg><span id="cl0"></span></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span id="cl1"></span></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8a8 8 0 0 0 16 0v-3a2 2 0 0 0-4 0"/></svg><span id="cl2"></span></div></div>
+  <section id="usage"><h2 data-t="h_where"></h2><div class="where" id="where"></div></section>
+  <section id="mode"><h2 data-t="h_mode"></h2><div class="modeimg"><img src="img/mode.jpg" alt=""></div><ol class="steps" id="steps"></ol><div class="timer" id="timer"><h3 data-t="tm_t"></h3><p class="h" data-t="tm_h"></p>
+      <div class="ring"><svg viewBox="0 0 200 200"><circle class="bg" cx="100" cy="100" r="88"/><circle class="fg" id="arc" cx="100" cy="100" r="88"/></svg>
+      <div class="t"><b id="clock"></b><span id="tlabel"></span></div></div>
+      <div class="tbtns"><button data-s="60">1 min</button><button data-s="300">5 min</button><button data-s="600">10 min</button><button class="main" id="startBtn"></button></div><div class="doneMsg" data-t="tm_done"></div></div></section>
+  <section id="fiche"><div class="grid2">
+    <div class="card mini"><h4 data-t="h_comp"></h4><ul id="comp"></ul></div>
+    <div class="card mini"><h4 data-t="h_cons"></h4><p data-t="cons"></p></div>
+    <div class="card mini" style="grid-column:1/-1"><h4 data-t="h_pack"></h4><div class="pack1"><b>1 L</b><span data-t="pack"></span></div></div>
+  </div></section>
+  <section id="securite"><h2 data-t="h_safe"></h2><div class="safety"><ul id="safe"></ul><div class="sos">
+    <a href="tel:+21323367777"><span data-t="sos1"></span><b>023 36 77 77</b></a>
+    <a href="tel:+21331886688"><span data-t="sos2"></span><b>031 88 66 88</b></a></div></div></section>
+  <section id="contact"><h2 data-t="h_contact"></h2><div class="contact">
+    <img src="../img/treox-logo-blanc.svg" alt="TREOX Algérie" width="430" height="125">
+    <p data-t="dist"></p>
+    <div class="btns">
+      <a class="btn primary" href="tel:+213671954616"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span class="ltr">0671 95 46 16</span></a>
+      <a class="btn" href="https://wa.me/213671954616?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20ASSYL%20Clean%20D%C3%A9graissant%20pour%20cuisine"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp</a>
+    </div></div></section>
+  <footer>© TREOX ALGÉRIE · <a href="https://www.treoxalgerie.com">treoxalgerie.com</a></footer>
+</main>
+<nav class="tabs" id="tabs">
+  <a href="#top" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span data-t="n1"></span></a>
+  <a href="#mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg><span data-t="n2"></span></a>
+  <a href="#fiche"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg><span data-t="n3"></span></a>
+  <a href="#securite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4M12 16h.01"/></svg><span data-t="n4"></span></a>
+  <a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span data-t="n5"></span></a>
+</nav>
+<script>
+const T = {"fr": {"h_where": "Où l'utiliser", "h_mode": "Mode d'emploi", "h_comp": "Composition", "h_cons": "Conservation", "h_pack": "Contenance", "h_safe": "Précautions d'emploi", "h_contact": "Commander / Contact", "sos1": "Centre national antipoison (Alger)", "sos2": "Centre antipoison (Constantine)", "start": "Démarrer", "pause": "Pause", "resume": "Reprendre", "reset": "Recommencer", "remaining": "restant", "n1": "Accueil", "n2": "Emploi", "n3": "Fiche", "n4": "Sécurité", "n5": "Contact", "kicker": "Gamme domestique · ASSYL Clean", "sub": "Dégraissant pour toutes les surfaces et appareils de cuisine", "c1": "Élimine la graisse", "c2": "Surfaces & appareils", "c3": "Sûr pour l'inox", "intro": "<p><b>ASSYL CLEAN dégraissant pour cuisine</b>, conçu pour éliminer la graisse et la saleté de toutes les surfaces de cuisine : plaques de cuisson, fours, plans de travail et appareils.</p><p>Sûr pour <b>l'inox, la céramique</b>, etc.</p>", "cons": "À conserver fermé dans l'emballage d'origine, dans un endroit sec, à l'abri de la lumière et du soleil.", "pack": "Flacon pulvérisateur", "dist": "SARL TREOX ALGÉRIE — Production des produits désinfectants et détergents.<br>Cité El Yasmine, Aïn El Bey, DNC N° 118, Constantine, Algérie.<br><span dir=\"ltr\">treox.info@treoxalgerie.com · www.treoxalgerie.com</span>", "tm_t": "Minuteur de temps d'action", "tm_h": "Lancez-le après avoir vaporisé la surface.", "tm_done": "✓ Temps d'action atteint — frottez puis rincez.", "stats": [["1–10′", "Temps d'action", true], ["1 L", "Flacon pulvérisateur", false]], "claims": [["flame", "Élimine la graisse"], ["shield", "Non corrosif"], ["hand", "Non irritant"]], "where": ["🔥 Plaques de cuisson", "♨️ Fours", "🍳 Plans de travail", "🌀 Hottes", "🧊 Électroménager", "✨ Inox · céramique"], "steps": [["Vaporiser directement sur la surface", ""], ["Laisser agir 1 à 10 minutes", "Selon le degré de salissure."], ["Frotter", "Avec une éponge ou un torchon."], ["Rincer à l'eau et essuyer", ""]], "comp": ["Eau traitée activée", "Substance active amphotère : cocamidopropyl diméthyl glycine"], "safe": ["Tenir hors de la portée des enfants.", "Respecter les indications de l'étiquette.", "<b>Ne pas mélanger</b> avec d'autres produits.", "En cas d'ingestion ou de contact avec les yeux, consulter immédiatement un médecin."]}, "ar": {"h_where": "أين يُستعمل", "h_mode": "طريقة الاستعمال", "h_comp": "التركيبة", "h_cons": "شروط الحفظ", "h_pack": "الحجم", "h_safe": "احتياطات الاستعمال", "h_contact": "الطلب / الاتصال", "sos1": "المركز الوطني لمكافحة التسمم (الجزائر)", "sos2": "مركز مكافحة التسمم (قسنطينة)", "start": "ابدأ", "pause": "إيقاف مؤقت", "resume": "استئناف", "reset": "إعادة", "remaining": "متبقٍ", "n1": "الرئيسية", "n2": "الاستعمال", "n3": "البطاقة", "n4": "السلامة", "n5": "اتصل", "kicker": "المنتجات المنزلية · أسيل كلين", "sub": "مزيل الدهون لجميع أسطح المطبخ والأجهزة المنزلية", "c1": "يزيل الدهون", "c2": "الأسطح والأجهزة", "c3": "آمن للفولاذ", "intro": "<p><b>أسيل كلين</b> مزيل دهون متعدد الأسطح للمطبخ، مصمم لإزالة الدهون والأوساخ من جميع أسطح المطبخ: المواقد، الأفران، أسطح العمل والأجهزة.</p><p>آمن <b>للفولاذ المقاوم للصدأ والسيراميك</b>… وغيرها.</p>", "cons": "يُحفظ في عبوته الأصلية في مكان جاف، بعيدًا عن أشعة الشمس المباشرة.", "pack": "عبوة رذاذ", "dist": "شركة تريوكس الجيري — إنتاج المواد المطهرة والمنظفة.<br>حي الياسمين، الشطر الثاني دي – أن – سي، طريق عين الباي رقم 118، قسنطينة، الجزائر.<br><span dir=\"ltr\">treox.info@treoxalgerie.com · www.treoxalgerie.com</span>", "tm_t": "مؤقت مدة التأثير", "tm_h": "شغّله بعد رش السطح.", "tm_done": "✓ انتهت مدة التأثير — افرك ثم اشطف.", "stats": [["1–10′", "مدة التأثير", true], ["1 L", "عبوة رذاذ", false]], "claims": [["flame", "يزيل الدهون"], ["shield", "غير مسبب للتآكل"], ["hand", "غير مسبب للتهيج"]], "where": ["🔥 المواقد", "♨️ الأفران", "🍳 أسطح العمل", "🌀 الشفاطات", "🧊 الأجهزة المنزلية", "✨ فولاذ · سيراميك"], "steps": [["يُرش مباشرة على السطح", ""], ["يُترك من 1 إلى 10 دقائق", "حسب درجة الاتساخ."], ["يُفرك", "بقطعة إسفنجية أو منشفة."], ["يُشطف بالماء ويُمسح", ""]], "comp": ["ماء معالج منشط", "مادة فعالة أمفوتيرية: كوكاميدوبروبيل ثنائي ميثيل جلايسين"], "safe": ["يُحفظ بعيدًا عن متناول الأطفال.", "اقرأ ملصق معلومات المنتج بعناية.", "<b>لا يُخلط</b> مع منتجات أخرى.", "في حالة البلع أو ملامسة العينين، استشر طبيبًا."]}};
+const TIMER = true, TDEF = 300, DOSE = null;
+let L='fr';
+try{ L = localStorage.getItem('lang') || ((navigator.language||'').startsWith('ar')?'ar':'fr'); }catch(e){}
+const $=id=>document.getElementById(id);
+function render(){
+  const t=T[L];
+  document.documentElement.lang=L; document.documentElement.dir=L==='ar'?'rtl':'ltr';
+  document.querySelectorAll('[data-t]').forEach(el=>{const v=t[el.dataset.t]; if(typeof v==='string') el.innerHTML=v;});
+  t.stats.forEach(([v,l],i)=>{$('sv'+i).textContent=v; $('sl'+i).textContent=l;});
+  t.claims.forEach(([k,l],i)=>{$('cl'+i).textContent=l;});
+  $('where').innerHTML=t.where.map(w=>`<span>${w}</span>`).join('');
+  $('steps').innerHTML=t.steps.map(([b,s])=>`<li><div><b>${b}</b>${s?`<small>${s}</small>`:''}</div></li>`).join('');
+  $('comp').innerHTML=t.comp.map(c=>`<li>${c}</li>`).join('');
+  $('safe').innerHTML=t.safe.map(s=>`<li><span>${s}</span></li>`).join('');
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===L));
+  document.querySelector('.hero h1').style.textAlign=L==='ar'?'right':'left';
+  if(TIMER) drawTimer(); if(DOSE) calc();
+}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>{L=b.dataset.l;try{localStorage.setItem('lang',L)}catch(e){}render();});
+
+/* --- dosage --- */
+function calc(){ const w=parseFloat(String($('water').value).replace(',','.'))||0, ml=w*DOSE.ml_per_l;
+  $('ml').textContent=Math.round(ml)+' ml'; const c=ml/DOSE.cap; $('caps').textContent=(Math.round(c*2)/2).toLocaleString('fr-FR')+' '+T[L].capw; }
+if(DOSE){ $('water').addEventListener('input',calc); document.querySelectorAll('.presets button').forEach(b=>b.onclick=()=>{$('water').value=b.dataset.v;calc();}); }
+
+/* --- minuteur --- */
+let total=TDEF||60,left=total,endAt=0,tick=null,state='idle',wake=null,C=0,arc=null;
+if(TIMER){ arc=$('arc'); C=2*Math.PI*88; arc.style.strokeDasharray=C; }
+const fmt=s=>String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');
+function drawTimer(){const t=T[L];
+  $('clock').textContent=fmt(Math.ceil(left)); arc.style.strokeDashoffset=C*(1-left/total);
+  $('tlabel').textContent=state==='done'?'':t.remaining;
+  $('startBtn').textContent=state==='running'?t.pause:state==='paused'?t.resume:state==='done'?t.reset:t.start;
+  $('timer').classList.toggle('done',state==='done');}
+function beep(){try{const a=new(window.AudioContext||window.webkitAudioContext)();[0,.35,.7].forEach(d=>{const o=a.createOscillator(),g=a.createGain();o.frequency.value=880;o.connect(g);g.connect(a.destination);g.gain.setValueAtTime(.0001,a.currentTime+d);g.gain.exponentialRampToValueAtTime(.3,a.currentTime+d+.02);g.gain.exponentialRampToValueAtTime(.0001,a.currentTime+d+.25);o.start(a.currentTime+d);o.stop(a.currentTime+d+.3);});}catch(e){}
+  try{navigator.vibrate&&navigator.vibrate([300,150,300,150,300]);}catch(e){}}
+async function lockScreen(on){try{if(on&&'wakeLock' in navigator)wake=await navigator.wakeLock.request('screen');else if(!on&&wake){await wake.release();wake=null;}}catch(e){}}
+function run(){clearInterval(tick);tick=setInterval(()=>{left=Math.max(0,(endAt-Date.now())/1000);if(left<=0){clearInterval(tick);state='done';lockScreen(false);beep();}drawTimer();},250);}
+function setDur(s){clearInterval(tick);total=left=s;state='idle';lockScreen(false);drawTimer();}
+if(TIMER){
+  document.querySelectorAll('.tbtns [data-s]').forEach(b=>b.onclick=()=>setDur(+b.dataset.s));
+  $('startBtn').onclick=()=>{
+    if(state==='running'){clearInterval(tick);state='paused';lockScreen(false);}
+    else if(state==='done'){setDur(total);return;}
+    else{endAt=Date.now()+left*1000;state='running';lockScreen(true);run();}
+    drawTimer();};
+}
+const tabs=[...document.querySelectorAll('#tabs a')], targets=tabs.map(a=>document.querySelector(a.getAttribute('href')));
+addEventListener('scroll',()=>{let i=0;targets.forEach((s,k)=>{if(s.getBoundingClientRect().top<innerHeight*.4)i=k;});
+  if(innerHeight+scrollY>=document.body.scrollHeight-4)i=tabs.length-1;tabs.forEach((a,k)=>a.classList.toggle('on',k===i));},{passive:true});
+render();
+if('serviceWorker' in navigator) addEventListener('load',()=>navigator.serviceWorker.register('../sw.js').catch(()=>{}));
+</script>
+</body>
+</html>

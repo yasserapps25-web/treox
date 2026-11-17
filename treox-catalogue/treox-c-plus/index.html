@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TREOX C+ — Fiche technique</title>
+<meta name="description" content="TREOX C+ : détergent dégraissant moussant multi-usages professionnel. Fiche technique, calculateur de dilution et contact distributeur.">
+<meta name="theme-color" content="#2b1e46">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="img/icon-192.png">
+<link rel="apple-touch-icon" href="../img/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="TREOX C+">
+<style>
+:root{
+  --ink:#1d1530; --ink2:#4a4160; --muted:#7a7290;
+  --bg:#f6f4f9; --card:#ffffff; --line:#e7e2ef;
+  --brand:#2b1e46; --brand2:#4b2f73; --accent:#f07a1a; --accent-soft:#fdeee1;
+  --ok:#1f9d6b; --warn:#c2410c;
+  --r:18px; --shadow:0 6px 24px rgba(43,30,70,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#f2eef8; --ink2:#cfc7de; --muted:#9a91b0;
+    --bg:#140e20; --card:#1e1630; --line:#2f2545; --accent-soft:#3a2516;
+    --shadow:0 6px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#f2eef8; --ink2:#cfc7de; --muted:#9a91b0;
+  --bg:#140e20; --card:#1e1630; --line:#2f2545; --accent-soft:#3a2516;
+  --shadow:0 6px 24px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans Arabic",Tahoma,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.55;font-size:16px;
+  padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+[dir="rtl"] body{font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+/* Top bar */
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:8px;
+  padding:calc(10px + env(safe-area-inset-top)) 16px 10px;background:rgba(43,30,70,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#fff}
+.brandmark{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.06em;font-size:15px}
+.back{display:grid;place-items:center;width:34px;height:34px;margin-inline-end:-2px;border-radius:10px;background:rgba(255,255,255,.12);color:#fff}
+.back svg{width:20px;height:20px}
+[dir="rtl"] .back svg{transform:scaleX(-1)}
+.brandmark i{width:30px;height:30px;border-radius:50%;background:var(--accent);display:grid;place-items:center;font-style:normal;font-size:13px;letter-spacing:0}
+.lang{display:flex;background:rgba(255,255,255,.12);border-radius:999px;padding:3px}
+.lang button{border:0;background:none;color:#fff;font:inherit;font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;cursor:pointer}
+.lang button.on{background:#fff;color:var(--brand)}
+
+/* Hero */
+.hero{position:relative;color:#fff;overflow:hidden;
+  background:linear-gradient(180deg,rgba(43,30,70,.55),rgba(43,30,70,.96) 78%),url(img/usine.jpg) center/cover;
+  padding:28px 16px 0}
+.hero .kicker{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#ffd2ad;
+  border:1px solid rgba(255,210,173,.4);border-radius:999px;padding:4px 10px}
+[dir="rtl"] .hero .kicker{letter-spacing:0}
+[dir="rtl"] .hero h1{text-align:right!important}
+.hero h1{font-size:46px;line-height:1;margin:14px 0 8px;font-weight:900;letter-spacing:.02em}
+.hero h1 sup{color:var(--accent);font-size:.6em;vertical-align:.55em}
+.hero .sub{font-size:15px;font-weight:600;color:#e9e3f3;max-width:30ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
+.chip{font-size:12.5px;font-weight:700;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);padding:6px 10px;border-radius:999px}
+.prodimg{margin:18px -16px 0;position:relative}
+.prodimg img{width:100%;max-height:340px;object-fit:cover;object-position:center 40%;
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000 18%);mask-image:linear-gradient(180deg,transparent,#000 18%)}
+
+main{max-width:720px;margin:0 auto;padding:0 16px}
+.intro{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:18px;margin-top:-26px;position:relative;z-index:2;
+  border-inline-start:4px solid var(--accent);font-size:15.5px;color:var(--ink2)}
+.intro b{color:var(--ink)}
+
+/* Quick stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+.stat{background:var(--card);border-radius:14px;padding:12px 10px;text-align:center;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:20px;color:var(--accent);font-weight:900;line-height:1.2;direction:ltr}
+.stat span{font-size:12px;color:var(--muted);font-weight:600}
+
+/* Sections */
+section{scroll-margin-top:70px;margin:26px 0}
+h2{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+[dir="rtl"] h2{letter-spacing:0;font-size:16px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:16px}
+.list{list-style:none;display:grid;gap:2px}
+.list li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}
+.list li:last-child{border-bottom:0}
+.ico{flex:none;width:36px;height:36px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.ico svg{width:20px;height:20px}
+.list b{display:block;font-size:15px}
+.list small{display:block;color:var(--muted);font-size:13.5px;line-height:1.45}
+.list .t{padding-top:7px;font-weight:600}
+
+/* Steps */
+.steps{list-style:none;counter-reset:s;display:grid;gap:10px}
+.steps li{counter-increment:s;display:flex;gap:14px;background:var(--card);border-radius:14px;padding:14px;box-shadow:var(--shadow);align-items:flex-start}
+.steps li::before{content:counter(s);flex:none;width:32px;height:32px;border-radius:50%;background:var(--brand);color:#fff;font-weight:800;display:grid;place-items:center}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .steps li::before{background:var(--accent)}}
+:root[data-theme="dark"] .steps li::before{background:var(--accent)}
+.steps p{padding-top:4px;font-size:15px}
+
+/* Calculator */
+.calc{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border-radius:var(--r);padding:18px;box-shadow:var(--shadow)}
+.calc h3{font-size:17px;margin-bottom:4px}
+.calc p.h{font-size:13px;color:#d8cfe8;margin-bottom:14px}
+.field{display:flex;align-items:center;background:#fff;border-radius:12px;overflow:hidden}
+.field input{flex:1;min-width:0;border:0;font:inherit;font-size:22px;font-weight:800;padding:12px 14px;color:var(--brand);background:transparent;outline:none;direction:ltr;text-align:start}
+.field span{padding:0 14px;color:var(--muted);font-weight:700}
+.presets{display:flex;gap:8px;margin:10px 0 14px;flex-wrap:wrap}
+.presets button{border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font:inherit;font-size:13px;font-weight:700;padding:7px 12px;border-radius:999px;cursor:pointer}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.res div{background:rgba(255,255,255,.1);border-radius:12px;padding:12px}
+.res small{display:block;font-size:12px;color:#d8cfe8;font-weight:600}
+.res b{font-size:22px;font-weight:900;color:#ffb57a;direction:ltr;display:inline-block}
+.res .full{grid-column:1/-1;font-size:13px;color:#e9e3f3}
+
+/* Table */
+.spec{width:100%;border-collapse:collapse}
+.spec td{padding:12px 4px;border-bottom:1px solid var(--line);font-size:15px}
+.spec tr:last-child td{border-bottom:0}
+.spec td:first-child{color:var(--muted);font-weight:600;width:42%}
+.spec td:last-child{font-weight:700}
+.ltr{direction:ltr;unicode-bidi:isolate}
+
+.grid2{display:grid;gap:12px}
+@media(min-width:560px){.grid2{grid-template-columns:1fr 1fr}}
+.mini h4{font-size:14px;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.mini p{font-size:14px;color:var(--ink2)}
+.pack{display:flex;gap:10px;margin-top:4px}
+.pack div{flex:1;text-align:center;border:2px solid var(--line);border-radius:14px;padding:12px 4px}
+.pack b{font-size:24px;font-weight:900;color:var(--brand)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .pack b{color:var(--accent)}}
+:root[data-theme="dark"] .pack b{color:var(--accent)}
+.pack small{display:block;color:var(--muted);font-size:12px;font-weight:600}
+
+.safety{background:var(--accent-soft);border-radius:var(--r);padding:16px}
+.safety ul{list-style:none;display:grid;gap:8px;margin-top:4px}
+.safety li{display:flex;gap:10px;font-size:14.5px}
+.safety li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--warn);margin-top:8px}
+.sos{display:grid;gap:8px;margin-top:12px}
+.sos a{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--card);border-radius:12px;padding:12px 14px;text-decoration:none;font-size:14px;font-weight:600}
+.sos a b{color:var(--warn);direction:ltr;white-space:nowrap}
+
+/* Contact */
+.contact{background:var(--brand);color:#fff;border-radius:var(--r);padding:18px;overflow:hidden}
+.contact img{height:34px;width:auto;margin-bottom:10px}
+.contact p{font-size:13.5px;color:#d8cfe8}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:800;font-size:14px;padding:13px 10px;border-radius:12px;background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.18)}
+.btn.primary{background:var(--accent);border-color:var(--accent)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn .ltr{white-space:nowrap}
+.maker{margin-top:14px;font-size:13px;color:var(--muted)}
+.maker b{color:var(--ink)}
+footer{text-align:center;font-size:12px;color:var(--muted);padding:24px 16px 8px}
+
+/* Bottom nav */
+nav.tabs{position:fixed;inset-inline:0;bottom:0;z-index:30;display:grid;grid-template-columns:repeat(5,1fr);
+  background:var(--card);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom));box-shadow:0 -4px 20px rgba(0,0,0,.06)}
+nav.tabs a{display:flex;flex-direction:column;align-items:center;gap:2px;text-decoration:none;font-size:10.5px;font-weight:700;color:var(--muted);padding:4px 0}
+nav.tabs a svg{width:22px;height:22px}
+nav.tabs a.on{color:var(--accent)}
+
+/* Install banner */
+.install{position:fixed;inset-inline:12px;bottom:calc(74px + env(safe-area-inset-bottom));z-index:40;background:var(--ink);color:var(--bg);
+  border-radius:16px;padding:12px 14px;display:none;align-items:center;gap:12px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.install.show{display:flex}
+.install img{width:40px;height:40px;border-radius:10px}
+.install div{flex:1;font-size:13px;line-height:1.35}
+.install b{display:block;font-size:14px}
+.install button{border:0;font:inherit;font-weight:800;font-size:13px;border-radius:10px;padding:9px 12px;cursor:pointer}
+.install .go{background:var(--accent);color:#fff}
+.install .x{background:transparent;color:inherit;opacity:.7;padding:9px 6px}
+
+.contact img{height:46px!important;width:auto}
+.dist img{height:34px!important;width:auto}
+.contact p{line-height:1.55}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="brandmark"><a class="back" href="../" aria-label="Catalogue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></a><i>C+</i><span>TREOX</span></div>
+  <div class="lang" role="group" aria-label="Langue">
+    <button data-l="fr" class="on">FR</button>
+    <button data-l="ar">عربي</button>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <span class="kicker" data-t="kicker"></span>
+  <h1 dir="ltr" style="text-align:start">TREOX C<sup>+</sup></h1>
+  <p class="sub" data-t="sub"></p>
+  <div class="chips">
+    <span class="chip" data-t="c1"></span><span class="chip" data-t="c2"></span><span class="chip" data-t="c3"></span>
+  </div>
+  <div class="prodimg"><img src="img/produit.jpg" alt="TREOX C+ — flacon et bidon 20 L" width="525" height="396"></div>
+</div>
+
+<main>
+  <p class="intro" data-t="intro"></p>
+
+  <div class="stats">
+    <div class="stat"><b>1:50–80</b><span data-t="s1"></span></div>
+    <div class="stat"><b>5–20′</b><span data-t="s2"></span></div>
+    <div class="stat"><b>24</b><span data-t="s3"></span></div>
+  </div>
+
+  <section id="usage">
+    <h2 data-t="h_app"></h2>
+    <div class="card"><ul class="list" id="apps"></ul></div>
+  </section>
+
+  <section>
+    <h2 data-t="h_prop"></h2>
+    <div class="card"><ul class="list" id="props"></ul></div>
+  </section>
+
+  <section id="mode">
+    <h2 data-t="h_mode"></h2>
+    <ol class="steps" id="steps"></ol>
+  </section>
+
+  <section id="calc">
+    <h2 data-t="h_calc"></h2>
+    <div class="calc">
+      <h3 data-t="calc_t"></h3>
+      <p class="h" data-t="calc_h"></p>
+      <label class="field">
+        <input id="water" type="number" inputmode="decimal" min="0" step="any" value="100" aria-label="Eau (litres)">
+        <span data-t="liters"></span>
+      </label>
+      <div class="presets">
+        <button data-v="10">10 L</button><button data-v="50">50 L</button><button data-v="100">100 L</button><button data-v="500">500 L</button><button data-v="1000">1000 L</button>
+      </div>
+      <div class="res">
+        <div><small data-t="r_min"></small><b id="rmin"></b></div>
+        <div><small data-t="r_max"></small><b id="rmax"></b></div>
+        <div class="full" id="rnote"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fiche">
+    <h2 data-t="h_spec"></h2>
+    <div class="card">
+      <table class="spec"><tbody id="spec"></tbody></table>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid2">
+      <div class="card mini"><h4 data-t="h_comp"></h4><p data-t="comp"></p></div>
+      <div class="card mini"><h4 data-t="h_cons"></h4><p data-t="cons"></p></div>
+      <div class="card mini"><h4 data-t="h_life"></h4><p data-t="life"></p></div>
+      <div class="card mini"><h4 data-t="h_pack"></h4>
+        <div class="pack"><div><b>5</b><small data-t="L"></small></div><div><b>10</b><small data-t="L"></small></div><div><b>20</b><small data-t="L"></small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="securite">
+    <h2 data-t="h_safe"></h2>
+    <div class="safety">
+      <ul id="safe"></ul>
+      <div class="sos">
+        <a href="tel:+21323367777"><span data-t="sos1"></span><b>023 36 77 77</b></a>
+        <a href="tel:+21331886688"><span data-t="sos2"></span><b>031 88 66 88</b></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 data-t="h_contact"></h2>
+    <div class="contact">
+      <img src="../img/treox-logo-blanc.svg" alt="TREOX Algérie" width="430" height="125">
+      <p data-t="dist"></p>
+      
+      <div class="btns">
+        <a class="btn primary" href="tel:+213671954616"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span class="ltr">0671 95 46 16</span></a>
+        <a class="btn" href="https://www.treoxalgerie.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span class="ltr">treoxalgerie.com</span></a>
+        <a class="btn" href="https://wa.me/213671954616"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp</a>
+        <a class="btn" href="mailto:treox.info@treoxalgerie.com?subject=Demande%20TREOX%20C%2B"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><span data-t="quote"></span></a>
+      </div>
+    </div>
+    
+  </section>
+
+  <footer>© TREOX ALGÉRIE · <a href="https://www.treoxalgerie.com">treoxalgerie.com</a></footer>
+</main>
+
+<nav class="tabs" id="tabs">
+  <a href="#top" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span data-t="n1"></span></a>
+  <a href="#mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg><span data-t="n2"></span></a>
+  <a href="#calc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.7s-6 6.6-6 11.3a6 6 0 0 0 12 0c0-4.7-6-11.3-6-11.3z"/></svg><span data-t="n3"></span></a>
+  <a href="#fiche"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg><span data-t="n4"></span></a>
+  <a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span data-t="n5"></span></a>
+</nav>
+
+<div class="install" id="install">
+  <img src="../img/icon-192.png" alt="">
+  <div><b data-t="i_t"></b><span id="i_d" data-t="i_d"></span></div>
+  <button class="go" id="i_go" data-t="i_go"></button>
+  <button class="x" id="i_x" aria-label="Fermer">✕</button>
+</div>
+
+<script>
+const I = {
+  surf:'<path d="M3 7h18M3 12h18M3 17h18"/>',
+  tool:'<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/>',
+  fact:'<path d="M2 20h20M4 20V9l5 3V9l5 3V5h6v15"/>',
+  farm:'<path d="M3 21V10l9-6 9 6v11M9 21v-6h6v6"/>',
+  cold:'<path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1 19.1 4.9"/>',
+  bolt:'<path d="M13 2 3 14h9l-1 8 10-12h-9z"/>',
+  foam:'<circle cx="8" cy="14" r="4"/><circle cx="16" cy="10" r="4"/><circle cx="15" cy="18" r="2"/>',
+  grid:'<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
+  temp:'<path d="M14 14.8V4a2 2 0 1 0-4 0v10.8a4 4 0 1 0 4 0z"/>',
+  leaf:'<path d="M5 19c9 0 14-5 14-14-9 0-14 5-14 14zM5 19l7-7"/>'
+};
+const ico = k => `<span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${I[k]}</svg></span>`;
+
+const T = {
+fr:{
+  kicker:'Gamme professionnelle',
+  sub:'Nettoyant multi-usages professionnel · Détergent – dégraissant moussant',
+  c1:'Très moussant', c2:'Eau froide ou chaude', c3:'Sans parfum ni colorant',
+  intro:'<b>TREOX C+®</b> est un détergent professionnel, nettoyant et dégraissant très moussant, conçu pour une utilisation sur tous types de surfaces. Il élimine efficacement les graisses, huiles, protéines et autres salissures d\'origine animale ou végétale, tout en laissant les surfaces propres et sans résidus.',
+  s1:'Dilution', s2:'Temps d\'action', s3:'Mois de conservation',
+  h_app:'Application',
+  apps:[['surf','Surfaces et plans de travail, sols, murs'],['tool','Équipements, outils et moyens de transport'],['fact','Zones de production, milieu agro-alimentaire'],['farm','Élevages'],['cold','Zones de stockage et chambres froides']],
+  h_prop:'Propriétés',
+  props:[['bolt','Action puissante','Élimine rapidement les graisses, huiles et résidus organiques.'],['foam','Moussant','Mousse dense pour une adhérence optimale sur les surfaces verticales.'],['grid','Polyvalent','Convient à une large gamme de surfaces.'],['temp','Utilisation flexible','Efficace en eau froide ou chaude (40 °C).'],['leaf','Sans parfum, sans colorant','']],
+  h_mode:'Mode d\'emploi',
+  steps:['Diluer <b>1 L de TREOX C+</b> dans <b>50 à 80 L d\'eau</b>.','Appliquer la solution sur la surface manuellement ou à l\'aide d\'une machine adaptée à haute ou réduite pression, ou CIP.','Laisser agir <b>5 à 20 minutes</b>, puis frotter.','Rincer abondamment à l\'eau claire.'],
+  h_calc:'Calculateur de dilution',
+  calc_t:'Quelle quantité de produit ?', calc_h:'Saisissez le volume d\'eau à préparer.', liters:'litres d\'eau',
+  r_min:'Dosage léger (1:80)', r_max:'Dosage renforcé (1:50)',
+  note:(a,b)=>`Prévoir entre ${a} et ${b} de TREOX C+. Utilisez le dosage renforcé pour les salissures grasses importantes.`,
+  h_spec:'Caractéristiques',
+  spec:[['Couleur','Incolore à jaunâtre'],['Odeur','Sans odeur spécifique'],['État','Liquide'],['pH','<span class="ltr">11 – 12</span>'],['Densité','<span class="ltr">1,00 ± 0,05</span>']],
+  h_comp:'Composition', comp:'Eau traitée activée, substances actives anioniques (≥ 22 %) et amphotères, EDTA, conservateur.',
+  h_cons:'Conservation', cons:'À conserver fermé dans un endroit sec, à l\'abri de la lumière directe du soleil.',
+  h_life:'Durée de vie', life:'Les récipients non ouverts, stockés correctement, se conservent 24 mois.',
+  h_pack:'Unités de vente', L:'litres',
+  h_safe:'Précautions d\'emploi',
+  safe:['Tenir hors de portée des enfants.','Lire attentivement l\'étiquette avant utilisation.','Ne pas mélanger avec d\'autres produits.','En cas d\'ingestion ou de contact avec les yeux, consulter un médecin.'],
+  sos1:'Centre national antipoison (Alger)', sos2:'Centre antipoison (Constantine)',
+  h_contact:'Commander / Contact',
+  dist:'SARL TREOX ALGÉRIE — Production des produits désinfectants et détergents.<br>Cité El Yasmine, Aïn El Bey, DNC N° 118, Constantine, Algérie.<br><span dir="ltr">treox.info@treoxalgerie.com · www.treoxalgerie.com</span>',
+  addr:'',
+  quote:'Devis par e-mail',
+  maker:'<b>Fabricant :</b> SARL TREOX ALGÉRIE — Cité El Yasmine, Aïn El Bey, Constantine. Tél. <span class="ltr">0671 95 46 16</span> · treox.info@treoxalgerie.com',
+  n1:'Accueil', n2:'Emploi', n3:'Dilution', n4:'Fiche', n5:'Contact',
+  i_t:'Installer le catalogue TREOX', i_d:'Accès rapide, même hors connexion.', i_go:'Installer',
+  i_ios:'Touchez Partager ⎋ puis « Sur l\'écran d\'accueil ».'
+},
+ar:{
+  kicker:'منتج احترافي',
+  sub:'منظف متعدد الاستعمالات المهنية · منظف – مزيل ذهون – رغوي',
+  c1:'عالي الرغوة', c2:'ماء بارد أو ساخن', c3:'بدون عطور أو ملونات',
+  intro:'<b>تريوكس سي+ ®</b> منظف احترافي، عالي الرغوة، مصمم للاستخدام على جميع أنواع الأسطح لإزالة الدهون، الزيوت، البروتينات وغيرها من الأوساخ الحيوانية أو النباتية بشكل فعال، حيث يترك الأسطح نظيفة وخالية من البقايا. تركيبة مناسبة لمختلف البيئات المهنية.',
+  s1:'نسبة التخفيف', s2:'مدة التأثير', s3:'شهرًا صلاحية',
+  h_app:'الاستعمالات',
+  apps:[['surf','أسطح العمل والأرضيات والجدران'],['tool','المعدات والأدوات ووسائل النقل'],['fact','مناطق الإنتاج والصناعات الغذائية'],['farm','مزارع تربية الحيوانات'],['cold','مناطق التخزين وغرف التبريد']],
+  h_prop:'الخصائص',
+  props:[['bolt','فعالية عالية','يزيل الدهون والزيوت والبقايا العضوية بسرعة.'],['foam','رغوي','ينتج رغوة كثيفة للالتصاق مثالي على الأسطح العمودية.'],['grid','متعدد الاستعمالات','مناسب لمجموعة واسعة من الأسطح.'],['temp','سهل الاستخدام','فعال في الماء البارد أو الساخن (40° مئوية).'],['leaf','بدون عطور أو ملونات','']],
+  h_mode:'طريقة الاستعمال',
+  steps:['خفف <b>1 لتر من تريوكس سي+</b> في <b>50 إلى 80 لتر</b> من الماء.','قم بتطبيق المحلول على السطح يدويًا أو باستخدام آلة مناسبة ذات ضغط عالٍ أو منخفض أو CIP.','اتركه لمدة <b>5 إلى 20 دقيقة</b>، ثم افركه.','اشطفه جيدًا بالماء النظيف.'],
+  h_calc:'حاسبة التخفيف',
+  calc_t:'ما هي كمية المنتج؟', calc_h:'أدخل حجم الماء المراد تحضيره.', liters:'لتر ماء',
+  r_min:'جرعة خفيفة (1:80)', r_max:'جرعة مركزة (1:50)',
+  note:(a,b)=>`استعمل ما بين ${a} و ${b} من تريوكس سي+. استخدم الجرعة المركزة للأوساخ الدهنية الكثيفة.`,
+  h_spec:'الخواص',
+  spec:[['اللون','عديم اللون إلى مائل إلى الأصفر'],['الرائحة','بدون رائحة خاصة'],['الحالة','سائل'],['pH','<span class="ltr">11 – 12</span>'],['الكثافة','<span class="ltr">1.00 ± 0.05</span>']],
+  h_comp:'التركيبة', comp:'ماء معالج ومنشط، مواد فعالة أنيونية (≥ 22٪) وأمفوتيرية، إيديتا، مادة حافظة.',
+  h_cons:'شروط الحفظ', cons:'يحفظ مغلقًا في مكان جاف، بعيدًا عن أشعة الشمس المباشرة.',
+  h_life:'مدة الصلاحية', life:'يمكن تخزين العبوات غير المفتوحة والمخزنة بشكل صحيح لمدة 24 شهرًا.',
+  h_pack:'وحدات البيع', L:'لتر',
+  h_safe:'احتياطات الاستعمال',
+  safe:['يُحفظ بعيدًا عن متناول الأطفال.','اقرأ ملصق معلومات المنتج بعناية.','لا يُخلط مع منتجات أخرى.','في حالة البلع أو ملامسة العينين، استشر طبيبًا.'],
+  sos1:'المركز الوطني لمكافحة التسمم (الجزائر)', sos2:'مركز مكافحة التسمم (قسنطينة)',
+  h_contact:'الطلب / الاتصال',
+  dist:'شركة تريوكس الجيري — إنتاج المواد المطهرة والمنظفة.<br>حي الياسمين، الشطر الثاني دي – أن – سي، طريق عين الباي رقم 118، قسنطينة، الجزائر.<br><span dir="ltr">treox.info@treoxalgerie.com · www.treoxalgerie.com</span>',
+  addr:'',
+  quote:'طلب عرض سعر',
+  maker:'<b>المُصنّع :</b> شركة تريوكس الجيري — حي الياسمين، عين الباي، قسنطينة. هاتف <span class="ltr">0671 95 46 16</span> · treox.info@treoxalgerie.com',
+  n1:'الرئيسية', n2:'الاستعمال', n3:'التخفيف', n4:'الخواص', n5:'اتصل',
+  i_t:'ثبّت كتالوج تريوكس', i_d:'وصول سريع حتى بدون إنترنت.', i_go:'تثبيت',
+  i_ios:'اضغط على مشاركة ⎋ ثم « إضافة إلى الشاشة الرئيسية ».'
+}};
+
+let L = 'fr';
+try { L = localStorage.getItem('lang') || (navigator.language||'').startsWith('ar') && 'ar' || 'fr'; } catch(e){}
+
+function fmt(v){
+  const loc = L==='ar' ? 'fr-FR' : 'fr-FR';
+  if (v < 1) return Math.round(v*1000).toLocaleString(loc) + ' ml';
+  return (Math.round(v*100)/100).toLocaleString(loc) + ' L';
+}
+function calc(){
+  const w = parseFloat(document.getElementById('water').value.replace(',','.')) || 0;
+  const a = fmt(w/80), b = fmt(w/50);
+  document.getElementById('rmin').textContent = a;
+  document.getElementById('rmax').textContent = b;
+  document.getElementById('rnote').textContent = T[L].note(a,b);
+}
+function render(){
+  const t = T[L];
+  document.documentElement.lang = L;
+  document.documentElement.dir = L==='ar' ? 'rtl' : 'ltr';
+  document.querySelectorAll('[data-t]').forEach(el => { const v = t[el.dataset.t]; if (typeof v === 'string') el.innerHTML = v; });
+  document.getElementById('apps').innerHTML = t.apps.map(([k,s]) => `<li>${ico(k)}<span class="t">${s}</span></li>`).join('');
+  document.getElementById('props').innerHTML = t.props.map(([k,b,s]) => `<li>${ico(k)}<div>${s?`<b>${b}</b><small>${s}</small>`:`<span class="t" style="display:block">${b}</span>`}</div></li>`).join('');
+  document.getElementById('steps').innerHTML = t.steps.map(s => `<li><p>${s}</p></li>`).join('');
+  document.getElementById('spec').innerHTML = t.spec.map(([k,v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('');
+  document.getElementById('safe').innerHTML = t.safe.map(s => `<li>${s}</li>`).join('');
+  document.querySelectorAll('.lang button').forEach(b => b.classList.toggle('on', b.dataset.l===L));
+  if (isIOS) document.getElementById('i_d').textContent = t.i_ios;
+  calc();
+}
+document.querySelectorAll('.lang button').forEach(b => b.onclick = () => { L = b.dataset.l; try{localStorage.setItem('lang',L)}catch(e){} render(); });
+document.getElementById('water').addEventListener('input', calc);
+document.querySelectorAll('.presets button').forEach(b => b.onclick = () => { document.getElementById('water').value = b.dataset.v; calc(); });
+
+/* active tab on scroll */
+const tabs = [...document.querySelectorAll('#tabs a')];
+const targets = tabs.map(a => document.querySelector(a.getAttribute('href')));
+addEventListener('scroll', () => {
+  let i = 0; targets.forEach((s,k) => { if (s.getBoundingClientRect().top < innerHeight*0.4) i = k; });
+  if (innerHeight + scrollY >= document.body.scrollHeight - 4) i = tabs.length-1;
+  tabs.forEach((a,k) => a.classList.toggle('on', k===i));
+}, {passive:true});
+
+/* Install prompt */
+const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) && !window.MSStream;
+const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone;
+const bar = document.getElementById('install');
+let deferred = null, dismissed = false;
+try { dismissed = localStorage.getItem('installDismissed') === '1'; } catch(e){}
+addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferred = e; if (!dismissed) bar.classList.add('show'); });
+document.getElementById('i_go').onclick = async () => {
+  if (deferred) { deferred.prompt(); await deferred.userChoice; deferred = null; }
+  bar.classList.remove('show');
+};
+document.getElementById('i_x').onclick = () => { bar.classList.remove('show'); try{localStorage.setItem('installDismissed','1')}catch(e){} };
+if (isIOS && !standalone && !dismissed) { setTimeout(() => { bar.classList.add('show'); document.getElementById('i_go').style.display='none'; }, 2500); }
+
+render();
+
+if ('serviceWorker' in navigator) addEventListener('load', () => navigator.serviceWorker.register('../sw.js').catch(()=>{}));
+</script>
+</body>
+</html>
