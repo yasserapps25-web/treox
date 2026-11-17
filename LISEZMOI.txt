@@ -1,0 +1,20 @@
+CATALOGUE TREOX ALGÉRIE
+
+STRUCTURE
+  index.html              -> page catalogue (accueil)
+  treox-c-plus/           -> page produit TREOX C+
+  treox-sensitive/        -> page produit TREOX SENSITIVE
+  (un dossier par produit)
+
+Adresse de chaque produit (= contenu du QR code) :
+  https://VOTRE-SITE.netlify.app/treox-c-plus/
+  https://VOTRE-SITE.netlify.app/treox-sensitive/
+
+METTRE A JOUR LE SITE (sans changer d'adresse)
+  1. app.netlify.com -> ouvrir votre site
+  2. Onglet "Deploys"
+  3. Glisser-déposer le dossier "treox-catalogue" dans la zone en bas de page
+  NE PAS utiliser Netlify Drop : cela crée un nouveau site avec une nouvelle adresse.
+
+CHANGER LE NOM DU SITE (à faire AVANT d'imprimer les QR codes)
+  Site configuration -> General -> Site details -> Change site name
